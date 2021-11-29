@@ -1,0 +1,35 @@
+{
+  "Crypto": [
+    {
+      "name": "Synthetix Network Token",
+      "id": 1,
+      "Quantité": 21.406816,
+      "Prix d'achat": 0
+    },
+    {
+      "name": "Polkadot",
+      "id": 2,
+      "Quantité": 4.083744
+    },
+    {
+      "name": "Binance Coin",
+      "id": 3,
+      "Quantité": 0.069107
+    },
+    {
+      "name": "Mines of Dalarnia",
+      "id": 4,
+      "Quantité": 6
+    },
+    {
+      "name": "Porta",
+      "id": 5,
+      "Quantité": 50
+    },
+    {
+      "name": "Peculium",
+      "id": 6,
+      "Quantité": 1050
+    }
+  ]
+}
