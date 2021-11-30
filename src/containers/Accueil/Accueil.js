@@ -1,7 +1,13 @@
 // Scss
 import "./Accueil.scss";
 
-const Accueil = () => {
-  return <div className="accueil">Accueil</div>;
+import Listings from "../../components/Listings/Listings";
+
+const Accueil = ({ dataCoinMarketCap }) => {
+  return (
+    <div className="accueil">
+      <Listings dataCoinMarketCap={dataCoinMarketCap} />
+    </div>
+  );
 };
 export default Accueil;

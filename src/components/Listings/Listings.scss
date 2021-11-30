@@ -1,0 +1,25 @@
+.listings {
+  .info {
+    display: flex;
+
+    margin: 0 5%;
+    margin-top: 20px;
+    padding: 3px 0;
+    border-top: solid 1px rgba(70, 70, 70, 0.179);
+    border-bottom: solid 1px rgba(70, 70, 70, 0.179);
+    div {
+      width: calc(100% / 8);
+      text-align: center;
+    }
+  }
+  .crypto-monnaies {
+    display: flex;
+    margin: 0 5%;
+
+    border-bottom: solid 1px rgba(70, 70, 70, 0.179);
+    div {
+      width: calc(100% / 8);
+      text-align: center;
+    }
+  }
+}

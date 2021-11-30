@@ -89,7 +89,10 @@ function App() {
     <Router>
       <StockExchange dataCoinMarketCap={dataCoinMarketCap} />
       <Routes>
-        <Route path="/" element={<Accueil />} />
+        <Route
+          path="/"
+          element={<Accueil dataCoinMarketCap={dataCoinMarketCap} />}
+        />
         <Route
           path="/MyCrypto"
           element={

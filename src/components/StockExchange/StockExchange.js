@@ -27,15 +27,15 @@ const StockExchange = ({ dataCoinMarketCap }) => {
         <div className="Effect">
           {dataCoinMarketCap.data.map((crypto, id) => {
             const Price = crypto.quote.USD.price;
-            const ChangeOneHours = crypto.quote.USD.percent_change_24h;
+            const ChangeOneDay = crypto.quote.USD.percent_change_24h;
 
-            if (ChangeOneHours <= 0) {
+            if (ChangeOneDay <= 0) {
               <span style={{ color: "#FF4E50" }}>
-                {ChangeOneHours.toFixed(2)}%
+                {ChangeOneDay.toFixed(2)}%
               </span>;
             } else {
               <span style={{ color: "#88C425" }}>
-                {ChangeOneHours.toFixed(2)}%
+                {ChangeOneDay.toFixed(2)}%
               </span>;
             }
 
@@ -47,10 +47,10 @@ const StockExchange = ({ dataCoinMarketCap }) => {
                 <span
                   style={{
                     color:
-                      Math.sign(ChangeOneHours) === -1 ? "#FF4E50" : "#88C425",
+                      Math.sign(ChangeOneDay) === -1 ? "#FF4E50" : "#88C425",
                   }}
                 >
-                  {ChangeOneHours.toFixed(2)}%
+                  {ChangeOneDay.toFixed(2)}%
                 </span>
                 &ensp;
               </div>
