@@ -1,7 +1,6 @@
 import "./Listings.scss";
 
-const Listings = ({ dataCoinMarketCap }) => {
-  console.log(dataCoinMarketCap);
+const Listings = ({ dataCryptocurrencyListingsLatest }) => {
   return (
     <div className="listings">
       <div className="info">
@@ -15,7 +14,7 @@ const Listings = ({ dataCoinMarketCap }) => {
         <div>Circulating Supply</div>
       </div>
 
-      {dataCoinMarketCap.data.map((crypto, id) => {
+      {dataCryptocurrencyListingsLatest.data.map((crypto, id) => {
         const ChangeOneDay = crypto.quote.USD.percent_change_24h;
         const ChangeSevenDay = crypto.quote.USD.percent_change_7d;
 

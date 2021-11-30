@@ -3,10 +3,12 @@ import "./Accueil.scss";
 
 import Listings from "../../components/Listings/Listings";
 
-const Accueil = ({ dataCoinMarketCap }) => {
+const Accueil = ({ dataCryptocurrencyListingsLatest }) => {
   return (
     <div className="accueil">
-      <Listings dataCoinMarketCap={dataCoinMarketCap} />
+      <Listings
+        dataCryptocurrencyListingsLatest={dataCryptocurrencyListingsLatest}
+      />
     </div>
   );
 };

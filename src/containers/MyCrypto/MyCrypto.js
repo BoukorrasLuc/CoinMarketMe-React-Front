@@ -4,21 +4,33 @@ import "./MyCrypto.scss";
 // Components
 import CardsCrypto from "../../components/CardsCrypto/CardsCrypto";
 
-const MyCrypto = ({ dataCoinMarketCap, dataInfo, MesCryptos }) => {
+const MyCrypto = ({
+  dataCryptocurrencyListingsLatest,
+  dataCryptocurrencyInfo,
+  MesCryptos,
+}) => {
+  const saveStateToLocalStorage = () => {
+    localStorage.setItem("dataInfo", JSON.stringify(dataCryptocurrencyInfo));
+  };
+
   return (
     <div className="myCrypto">
-      <CardsCrypto
-        logo={dataInfo.data[2586].logo}
+      <button onClick={saveStateToLocalStorage}>
+        Save State to local storage\
+      </button>
+
+      {/* <CardsCrypto
+        logo={dataCryptocurrencyInfo.data[2586].logo}
         name={MesCryptos.Crypto[0].name}
-        price={dataCoinMarketCap.data[122].quote.USD.price}
+        price={dataCryptocurrencyListingsLatest.data[122].quote.USD.price}
         quantité={MesCryptos.Crypto[0].Quantité}
       />
       <CardsCrypto
-        logo={dataInfo.data[2586].logo}
+        logo={dataCryptocurrencyInfo.data[2586].logo}
         name={MesCryptos.Crypto[0].name}
-        price={dataCoinMarketCap.data[122].quote.USD.price}
+        price={dataCryptocurrencyListingsLatest.data[122].quote.USD.price}
         quantité={MesCryptos.Crypto[0].Quantité}
-      />
+      /> */}
     </div>
   );
 };

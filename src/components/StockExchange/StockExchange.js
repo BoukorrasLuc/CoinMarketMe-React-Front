@@ -5,14 +5,14 @@ import "../StockExchange/StockExchange.scss";
 import dateFormat from "dateformat";
 import { Link } from "react-router-dom";
 
-const StockExchange = ({ dataCoinMarketCap }) => {
+const StockExchange = ({ dataCryptocurrencyListingsLatest }) => {
   return (
     <>
       <header>
         <div>CoinMarketMe</div>
         <div>
           {dateFormat(
-            dataCoinMarketCap.status.timestamp,
+            dataCryptocurrencyListingsLatest.status.timestamp,
             `d mmmm yyyy à HH"h"MM`
           )}
         </div>
@@ -25,7 +25,7 @@ const StockExchange = ({ dataCoinMarketCap }) => {
 
       <section className="Scroll-Stock-Exchange">
         <div className="Effect">
-          {dataCoinMarketCap.data.map((crypto, id) => {
+          {dataCryptocurrencyListingsLatest.data.map((crypto, id) => {
             const Price = crypto.quote.USD.price;
             const ChangeOneDay = crypto.quote.USD.percent_change_24h;
 

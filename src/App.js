@@ -8,7 +8,7 @@ import dateFormat from "dateformat";
 
 // Datas
 import MesCryptos from "./Data/MyCrypto.json";
-import CoinMarketCap from "./Data/CoinMarketCap.json"; // Data CoinMarketCap
+import cryptocurrencyListingsLatest from "./Data-CoinMarketCap/cryptocurrency-listings-latest.json"; // Data CoinMarketCap Cryptocurrency Listings Latest
 
 // Components
 import StockExchange from "./components/StockExchange/StockExchange";
@@ -18,8 +18,13 @@ import Accueil from "./containers/Accueil/Accueil";
 import MyCrypto from "./containers/MyCrypto/MyCrypto";
 
 function App() {
-  const [dataCoinMarketCap, setdataCoinMarketCap] = useState(CoinMarketCap);
-  const [dataInfo, setDataInfo] = useState({});
+  const [
+    dataCryptocurrencyListingsLatest,
+    setDataCryptocurrencyListingsLatest,
+  ] = useState(cryptocurrencyListingsLatest);
+
+  const [dataCryptocurrencyInfo, setDataCryptocurrencyInfo] = useState({});
+
   const [isLoading, setIsLoading] = useState(true);
 
   dateFormat.i18n = {
@@ -70,13 +75,15 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      // const responsePrice = await axios.get(
-      //   "http://localhost:3000/cryptoPrice"
+      // const responseCryptocurrencyListingsLatest = await axios.get(
+      //   "http://localhost:3000/cryptocurrencyListingsLatest"
       // );
-      // setDataPrice(responsePrice.data);
+      // setDataCryptocurrencyListingsLatest(responseCryptocurrencyListingsLatest.data);
 
-      const responseInfo = await axios.get("http://localhost:3000/cryptoInfo");
-      setDataInfo(responseInfo.data);
+      const responseCryptocurrencyInfo = await axios.get(
+        "http://localhost:3000/cryptocurrencyInfo"
+      );
+      setDataCryptocurrencyInfo(responseCryptocurrencyInfo.data);
 
       setIsLoading(false);
     };
@@ -87,18 +94,28 @@ function App() {
     <div>loading...</div>
   ) : (
     <Router>
-      <StockExchange dataCoinMarketCap={dataCoinMarketCap} />
+      <StockExchange
+        dataCryptocurrencyListingsLatest={dataCryptocurrencyListingsLatest}
+      />
       <Routes>
         <Route
           path="/"
-          element={<Accueil dataCoinMarketCap={dataCoinMarketCap} />}
+          element={
+            <Accueil
+              dataCryptocurrencyListingsLatest={
+                dataCryptocurrencyListingsLatest
+              }
+            />
+          }
         />
         <Route
           path="/MyCrypto"
           element={
             <MyCrypto
-              dataCoinMarketCap={dataCoinMarketCap}
-              dataInfo={dataInfo}
+              dataCryptocurrencyListingsLatest={
+                dataCryptocurrencyListingsLatest
+              }
+              dataCryptocurrencyInfo={dataCryptocurrencyInfo}
               MesCryptos={MesCryptos}
             />
           }
