@@ -6,6 +6,7 @@ import dateFormat from "dateformat";
 import { Link } from "react-router-dom";
 
 const StockExchange = ({ dataCryptocurrencyListingsLatest }) => {
+  console.log({ dataCryptocurrencyListingsLatest });
   return (
     <>
       <header>

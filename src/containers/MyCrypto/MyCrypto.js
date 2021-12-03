@@ -9,15 +9,15 @@ const MyCrypto = ({
   dataCryptocurrencyInfo,
   MesCryptos,
 }) => {
-  const saveStateToLocalStorage = () => {
-    localStorage.setItem("dataInfo", JSON.stringify(dataCryptocurrencyInfo));
-  };
+  // const saveStateToLocalStorage = () => {
+  //   localStorage.setItem("dataInfo", JSON.stringify(dataCryptocurrencyInfo));
+  // };
 
   return (
     <div className="myCrypto">
-      <button onClick={saveStateToLocalStorage}>
+      {/* <button onClick={saveStateToLocalStorage}>
         Save State to local storage\
-      </button>
+      </button> */}
 
       {/* <CardsCrypto
         logo={dataCryptocurrencyInfo.data[2586].logo}
