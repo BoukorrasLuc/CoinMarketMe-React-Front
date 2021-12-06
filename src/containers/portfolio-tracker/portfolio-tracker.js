@@ -1,5 +1,5 @@
 // Scss
-import "./MyCrypto.scss";
+import "./portfolio-tracker.scss";
 
 // Components
 import CardsCrypto from "../../components/CardsCrypto/CardsCrypto";

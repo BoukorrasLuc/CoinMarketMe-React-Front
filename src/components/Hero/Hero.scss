@@ -1,0 +1,70 @@
+.hero {
+  height: 558px;
+
+  padding: 0 14%;
+  .carrousel {
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 16px;
+
+    .one {
+      display: flex;
+      flex-direction: column;
+
+      width: 280px;
+      height: 194px;
+
+      font-family: "Inter", sans-serif;
+
+      img {
+        width: 280px;
+        height: 136px;
+
+        border-radius: 8px;
+        margin-bottom: 16px;
+        object-fit: cover;
+      }
+      span:nth-child(2) {
+        font-size: 12px;
+        line-height: 18px;
+        color: #58667e;
+      }
+      span:nth-child(3) {
+        font-size: 14px;
+        color: #000;
+      }
+    }
+    .two,
+    .three,
+    .four,
+    .five {
+      display: flex;
+      flex-direction: column;
+
+      width: 280px;
+      height: 194px;
+      margin-left: 24px;
+
+      font-family: "Inter", sans-serif;
+
+      img {
+        width: 280px;
+        height: 136px;
+
+        border-radius: 8px;
+        margin-bottom: 16px;
+        object-fit: cover;
+      }
+      span:nth-child(2) {
+        font-size: 12px;
+        line-height: 18px;
+        color: #58667e;
+      }
+      span:nth-child(3) {
+        font-size: 14px;
+        color: #000;
+      }
+    }
+  }
+}

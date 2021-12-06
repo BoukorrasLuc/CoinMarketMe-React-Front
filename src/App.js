@@ -16,7 +16,7 @@ import Header from "./components/Header/Header";
 
 // Containers
 import Accueil from "./containers/Accueil/Accueil";
-import MyCrypto from "./containers/MyCrypto/MyCrypto";
+import PortfolioTracker from "./containers/portfolio-tracker/portfolio-tracker";
 
 function App() {
   const [
@@ -114,7 +114,7 @@ function App() {
         <Route
           path="/portfolio-tracker"
           element={
-            <MyCrypto
+            <PortfolioTracker
               dataCryptocurrencyListingsLatest={
                 dataCryptocurrencyListingsLatest
               }
