@@ -12,7 +12,7 @@ import MesCryptos from "./Data/MyCrypto.json";
 // import cryptocurrencyInfo from "./Data-CoinMarketCap/cryptocurrency-info.json"; // Data CoinMarketCap Cryptocurrency Info
 
 // Components
-import StockExchange from "./components/StockExchange/StockExchange";
+import Header from "./components/Header/Header";
 
 // Containers
 import Accueil from "./containers/Accueil/Accueil";
@@ -97,7 +97,7 @@ function App() {
     <div>loading...</div>
   ) : (
     <Router>
-      <StockExchange
+      <Header
         dataCryptocurrencyListingsLatest={dataCryptocurrencyListingsLatest}
       />
       <Routes>
@@ -112,7 +112,7 @@ function App() {
           }
         />
         <Route
-          path="/MyCrypto"
+          path="/portfolio-tracker"
           element={
             <MyCrypto
               dataCryptocurrencyListingsLatest={

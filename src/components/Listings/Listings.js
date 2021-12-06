@@ -4,14 +4,33 @@ const Listings = ({ dataCryptocurrencyListingsLatest }) => {
   return (
     <div className="listings">
       <div className="info">
-        <div>#</div>
-        <div>Name</div>
-        <div>Price</div>
-        <div>24h %</div>
-        <div>7d %</div>
-        <div>Market Cap</div>
-        <div>Volume (24h)</div>
-        <div>Circulating Supply</div>
+        <div></div>
+        <div>
+          <p>#</p>
+        </div>
+        <div>
+          <p>Name</p>
+        </div>
+        <div>
+          <p>Price</p>
+        </div>
+        <div>
+          <p>24h %</p>
+        </div>
+        <div>
+          <p>7d %</p>
+        </div>
+        <div>
+          <p>Market Cap</p>
+        </div>
+        <div>
+          <p>Volume (24h)</p>
+        </div>
+        <div>
+          <p>Circulating Supply</p>
+        </div>
+        <div></div>
+        <div></div>
       </div>
 
       {dataCryptocurrencyListingsLatest.data.map((crypto, id) => {

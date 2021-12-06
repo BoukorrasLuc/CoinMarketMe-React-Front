@@ -1,20 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700");
+
 .listings {
+  width: 80%;
+  margin: 0 auto;
   .info {
     display: flex;
+    align-items: center;
 
+    height: 46px;
     margin: 0 5%;
     margin-top: 20px;
-    padding: 3px 0;
+
     border-top: solid 1px rgba(70, 70, 70, 0.179);
     border-bottom: solid 1px rgba(70, 70, 70, 0.179);
-    div {
-      width: calc(100% / 8);
-      text-align: center;
+
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 18px;
+
+    color: #171924;
+    div:nth-child(1) {
+      display: flex;
+      align-items: center;
+
+      width: 36px;
+      height: 46.5px;
+      padding: 11px 10px;
+
+      p {
+      }
+    }
+    div:nth-child(2) {
+      display: flex;
+      align-items: center;
+
+      width: 42.17px;
+      height: 46.5px;
+      padding: 11px 10px;
+
+      p {
+        text-align: left;
+      }
+    }
+    div:nth-child(3) {
+      display: flex;
+      align-items: center;
+
+      width: 226.53px;
+      height: 46.5px;
+      padding: 11px 10px;
+
+      p {
+        text-align: left;
+      }
+    }
+    div:nth-child(4) {
+      display: flex;
+      align-items: center;
+
+      width: 113.52px;
+      height: 46.5px;
+      padding: 11px 10px;
+
+      p {
+        text-align: right;
+      }
+    }
+    div:nth-child(5) {
+      display: flex;
+      align-items: center;
+
+      width: 79.69px;
+      height: 46.5px;
+      padding: 11px 10px;
+
+      p {
+        text-align: right;
+      }
+    }
+    div:nth-child(6) {
+      display: flex;
+      align-items: center;
+
+      width: 80.42px;
+      height: 46.5px;
+      padding: 11px 10px;
+
+      p {
+        text-align: right;
+      }
+    }
+    div:nth-child(7) {
+      display: flex;
+      align-items: center;
+
+      width: 168.14px;
+      height: 46.5px;
+      padding: 11px 10px;
+
+      p {
+        text-align: right;
+      }
+    }
+    div:nth-child(8) {
+      display: flex;
+      align-items: center;
+
+      width: 178.8px;
+      height: 46.5px;
+      padding: 11px 10px;
+
+      p {
+        text-align: right;
+      }
+    }
+    div:nth-child(9) {
+      display: flex;
+      align-items: center;
+
+      width: 200.69px;
+      height: 46.5px;
+      padding: 11px 10px;
+
+      p {
+        text-align: right;
+      }
+    }
+    div:nth-child(10) {
+      width: 184px;
+      height: 46.5px;
+      padding: 11px 10px;
+    }
+    div:nth-child(11) {
+      width: 60.05px;
+      height: 46.5px;
+      padding: 11px 10px;
     }
   }
   .crypto-monnaies {
     display: flex;
+    align-items: center;
     margin: 0 5%;
+    height: 80px;
 
     border-bottom: solid 1px rgba(70, 70, 70, 0.179);
     div {
