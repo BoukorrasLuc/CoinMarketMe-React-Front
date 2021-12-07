@@ -25,6 +25,7 @@ function App() {
   ] = useState({});
 
   const [dataCryptocurrencyInfo, setDataCryptocurrencyInfo] = useState({});
+  const [dataGlobalMetrics, setDataGlobalMetrics] = useState({});
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -88,6 +89,11 @@ function App() {
       );
       setDataCryptocurrencyInfo(responseCryptocurrencyInfo.data);
 
+      const responseGlobalMetrics = await axios.get(
+        "http://localhost:3000/globalMetrics"
+      );
+      setDataGlobalMetrics(responseGlobalMetrics.data);
+
       setIsLoading(false);
     };
     fetchData();
@@ -99,6 +105,7 @@ function App() {
     <Router>
       <Header
         dataCryptocurrencyListingsLatest={dataCryptocurrencyListingsLatest}
+        dataGlobalMetrics={dataGlobalMetrics}
       />
       <Routes>
         <Route
@@ -108,6 +115,7 @@ function App() {
               dataCryptocurrencyListingsLatest={
                 dataCryptocurrencyListingsLatest
               }
+              dataGlobalMetrics={dataGlobalMetrics}
             />
           }
         />

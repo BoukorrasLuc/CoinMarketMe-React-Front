@@ -5,14 +5,19 @@ import "./Header.scss";
 import dateFormat from "dateformat";
 import { Link } from "react-router-dom";
 
+// Svg
 import gas from "../../Asset/svg/gas.svg";
 import usd from "../../Asset/svg/USD.svg";
 import logo from "../../Asset/svg/coinmarketcap_1.svg";
 import diamond from "../../Asset/svg/diamond-icon.svg";
 
+// Img
 import avatar from "../../Asset/img/61359449293ccc2c4bcf07c7.png";
 
-const Header = ({ dataCryptocurrencyListingsLatest }) => {
+// Function
+import SeparatorComma from "../../Functions/SeparatorNumbComma";
+
+const Header = ({ dataCryptocurrencyListingsLatest, dataGlobalMetrics }) => {
   return (
     <div className="header">
       <div className="info">
@@ -20,27 +25,42 @@ const Header = ({ dataCryptocurrencyListingsLatest }) => {
           <div>
             <span>Cryptos</span>
             <span>:</span>
-            <span>15 245</span>
+            <span>
+              {SeparatorComma(dataGlobalMetrics.data.total_cryptocurrencies)}
+            </span>
           </div>
           <div>
             <span>Exchanges</span>
             <span>:</span>
-            <span>437</span>
+            <span>{dataGlobalMetrics.data.active_exchanges}</span>
           </div>
           <div>
             <span>Market Cap</span>
             <span>:</span>
-            <span>$2,167,676,867,754</span>
+            <span>
+              $
+              {SeparatorComma(
+                dataGlobalMetrics.data.quote.USD.total_market_cap.toFixed(2)
+              )}
+            </span>
           </div>
           <div>
             <span>24h Vol</span>
             <span>:</span>
-            <span>$124,151,361,497</span>
+            <span>
+              $
+              {SeparatorComma(
+                dataGlobalMetrics.data.quote.USD.total_volume_24h
+              )}
+            </span>
           </div>
           <div>
             <span>Dominance</span>
             <span>:</span>
-            <span>BTC: 41.3% ETH: 21.6%</span>
+            <span>
+              BTC: {dataGlobalMetrics.data.btc_dominance.toFixed(2)}% ETH:
+              {dataGlobalMetrics.data.eth_dominance.toFixed(2)}%
+            </span>
           </div>
           <div>
             <span>

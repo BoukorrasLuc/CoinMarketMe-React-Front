@@ -4,10 +4,15 @@ import "./Accueil.scss";
 import Listings from "../../components/Listings/Listings";
 import Hero from "../../components/Hero/Hero";
 
-const Accueil = ({ dataCryptocurrencyListingsLatest }) => {
+const Accueil = ({ dataCryptocurrencyListingsLatest, dataGlobalMetrics }) => {
+  console.log(dataGlobalMetrics);
+
   return (
     <div className="accueil">
-      <Hero />
+      <Hero
+        dataGlobalMetrics={dataGlobalMetrics}
+        dataCryptocurrencyListingsLatest={dataCryptocurrencyListingsLatest}
+      />
       <Listings
         dataCryptocurrencyListingsLatest={dataCryptocurrencyListingsLatest}
       />
