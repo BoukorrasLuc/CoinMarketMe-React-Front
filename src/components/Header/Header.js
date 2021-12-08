@@ -2,7 +2,7 @@
 import "./Header.scss";
 
 // Packages
-import dateFormat from "dateformat";
+// import dateFormat from "dateformat";
 import { Link } from "react-router-dom";
 
 // Svg
@@ -157,10 +157,8 @@ const Header = ({ dataCryptocurrencyListingsLatest, dataGlobalMetrics }) => {
     </div>
   );
 };
-export default Header;
 
-{
-  /* <section className="Scroll-Stock-Exchange">
+/* <section className="Scroll-Stock-Exchange">
 <div className="Effect">
   {dataCryptocurrencyListingsLatest.data.map((crypto, id) => {
     const Price = crypto.quote.USD.price;
@@ -195,4 +193,5 @@ export default Header;
   })}
 </div>
 </section> */
-}
+
+export default Header;

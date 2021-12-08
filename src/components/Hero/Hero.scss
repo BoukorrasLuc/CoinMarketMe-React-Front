@@ -94,6 +94,9 @@
       .total_market_cap_pourcentage {
         .contentTotalMarketCapYesterdayPercentageChange {
           display: inline-flex;
+          div {
+            font-weight: 600;
+          }
         }
       }
     }
@@ -120,6 +123,11 @@
       }
       .contentTotalVolume24hYesterdayPercentageChange {
         display: inline-flex;
+        div:nth-child(1) {
+          span {
+            font-weight: 600;
+          }
+        }
       }
       .defi_market_cap_volume,
       .defi_market_cap_pourcentage,
@@ -146,6 +154,13 @@
         display: inline-flex;
         .btc_dominance {
           font-weight: 600;
+        }
+        .contentBtcDominance24hPercentageChange {
+          div:nth-child(1) {
+            div:nth-child(2) {
+              font-weight: 600;
+            }
+          }
         }
       }
     }

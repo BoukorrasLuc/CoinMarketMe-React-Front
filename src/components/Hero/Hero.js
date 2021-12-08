@@ -12,7 +12,28 @@ import img5 from "../../Asset/img/1631754270064_Frame 48.png";
 import SeparatorPoint from "../../Functions/SeparatorNumbPoint";
 import SeparatorComma from "../../Functions/SeparatorNumbComma";
 
+// Package
+import { useState } from "react";
+
 const Hero = ({ dataGlobalMetrics, dataCryptocurrencyListingsLatest }) => {
+  // Condition D'affichage Read Less / Read More //
+
+  const [display, setDisplay] = useState(false);
+
+  const onButtonClickHandler = () => {
+    setDisplay(!display);
+  };
+
+  let trueFalse;
+
+  if (display) {
+    trueFalse = <>Read Less</>;
+  } else {
+    trueFalse = <>Read More</>;
+  }
+
+  // Condition D'affichage Total Market Cap Yesterday Percentage Change //
+
   let totalMarketCapYesterdayPercentageChange;
   if (
     dataGlobalMetrics.data.quote.USD
@@ -48,6 +69,8 @@ const Hero = ({ dataGlobalMetrics, dataCryptocurrencyListingsLatest }) => {
     );
   }
 
+  // Condition D'affichage Total Volume 24h Yesterday Percentage Change //
+
   let totalVolume24hYesterdayPercentageChange;
 
   if (
@@ -58,12 +81,12 @@ const Hero = ({ dataGlobalMetrics, dataCryptocurrencyListingsLatest }) => {
       <div className="contentTotalVolume24hYesterdayPercentageChange">
         <div style={{ color: "#ea3943" }}>
           <i className="fas fa-sort-down"></i>&nbsp;
-          <div>
+          <span>
             {dataGlobalMetrics.data.quote.USD.total_volume_24h_yesterday_percentage_change.toFixed(
               2
             )}
             %
-          </div>
+          </span>
         </div>
         &nbsp;decrease
       </div>
@@ -72,17 +95,20 @@ const Hero = ({ dataGlobalMetrics, dataCryptocurrencyListingsLatest }) => {
     totalVolume24hYesterdayPercentageChange = (
       <div className="contentTotalVolume24hYesterdayPercentageChange">
         <div style={{ color: "#16c784" }}>
-          <i className="fas fa-sort-up"></i>
-          &nbsp;
-          {dataGlobalMetrics.data.quote.USD.total_volume_24h_yesterday_percentage_change.toFixed(
-            2
-          )}
-          %
+          <i className="fas fa-sort-up"></i>&nbsp;
+          <span>
+            {dataGlobalMetrics.data.quote.USD.total_volume_24h_yesterday_percentage_change.toFixed(
+              2
+            )}
+            %
+          </span>
         </div>
         &nbsp;increase
       </div>
     );
   }
+
+  // Condition D'affichage BTC Dominance 24h Percentage Change //
 
   let btcDominance24hPercentageChange;
 
@@ -107,10 +133,12 @@ const Hero = ({ dataGlobalMetrics, dataCryptocurrencyListingsLatest }) => {
         &nbsp;increase of&nbsp;
         <div style={{ color: "#16c784" }}>
           <i className="fas fa-sort-up"></i>&nbsp;
-          {dataGlobalMetrics.data.btc_dominance_24h_percentage_change
-            .toFixed(2)
-            .replace(/[+]/g, "")}
-          %
+          <div>
+            {dataGlobalMetrics.data.btc_dominance_24h_percentage_change
+              .toFixed(2)
+              .replace(/[+]/g, "")}
+            %
+          </div>
         </div>
       </div>
     );
@@ -166,73 +194,81 @@ const Hero = ({ dataGlobalMetrics, dataCryptocurrencyListingsLatest }) => {
           .
         </span>
         <span>
-          <span>Read Less</span>
+          <span onClick={onButtonClickHandler}>{trueFalse}</span>
         </span>
-        <div className="secondText">
-          The total crypto market volume over the last 24 hours is&nbsp;
-          <span className="total_volume_24h">
-            $
-            {SeparatorPoint(
-              Math.round(
-                dataGlobalMetrics.data.quote.USD.total_volume_24h / 10000000
-              )
-            )}
-            B
-          </span>
-          , which makes a {totalVolume24hYesterdayPercentageChange}. The total
-          volume in DeFi is currently
-          <span className="defi_market_cap_volume">
-            &nbsp;$
-            {(dataGlobalMetrics.data.defi_volume_24h / 1000000000).toFixed(2)}B
-          </span>
-          ,&nbsp;
-          <span className="defi_market_cap_pourcentage">
-            {(
-              (dataGlobalMetrics.data.defi_volume_24h * 100) /
-              dataGlobalMetrics.data.quote.USD.total_volume_24h
-            ).toFixed(2)}
-            %
-          </span>
-          &nbsp;of the total crypto market 24-hour volume. The volume of all
-          stable coins is now&nbsp;
-          <span className="stablecoin_market_cap_volume">
-            $
-            {(
-              dataGlobalMetrics.data.stablecoin_volume_24h / 1000000000
-            ).toFixed(2)}
-            B
-          </span>
-          , which is&nbsp;
-          <span className="stablecoin_market_cap_pourcentage">
-            {(
-              (dataGlobalMetrics.data.stablecoin_volume_24h * 100) /
-              dataGlobalMetrics.data.quote.USD.total_volume_24h
-            ).toFixed(2)}
-            %
-          </span>
-          &nbsp;of the total crypto market 24-hour volume.
-        </div>
-        <div className="threeText">
-          <div>
-            Bitcoin's price is currently&nbsp;
-            <span className="btc_price">
-              $
-              {SeparatorComma(
-                dataCryptocurrencyListingsLatest.data[0].quote.USD.price.toFixed(
+
+        {display && (
+          <>
+            <div className="secondText">
+              The total crypto market volume over the last 24 hours is&nbsp;
+              <span className="total_volume_24h">
+                $
+                {SeparatorPoint(
+                  Math.round(
+                    dataGlobalMetrics.data.quote.USD.total_volume_24h / 10000000
+                  )
+                )}
+                B
+              </span>
+              , which makes a {totalVolume24hYesterdayPercentageChange}. The
+              total volume in DeFi is currently
+              <span className="defi_market_cap_volume">
+                &nbsp;$
+                {(dataGlobalMetrics.data.defi_volume_24h / 1000000000).toFixed(
                   2
-                )
-              )}
-              .
-            </span>
-          </div>
-          <div>
-            Bitcoin's dominance is currently&nbsp;
-            <span className="btc_dominance">
-              {dataGlobalMetrics.data.btc_dominance.toFixed(2)}%
-            </span>
-            , {btcDominance24hPercentageChange} over the day.
-          </div>
-        </div>
+                )}
+                B
+              </span>
+              ,&nbsp;
+              <span className="defi_market_cap_pourcentage">
+                {(
+                  (dataGlobalMetrics.data.defi_volume_24h * 100) /
+                  dataGlobalMetrics.data.quote.USD.total_volume_24h
+                ).toFixed(2)}
+                %
+              </span>
+              &nbsp;of the total crypto market 24-hour volume. The volume of all
+              stable coins is now&nbsp;
+              <span className="stablecoin_market_cap_volume">
+                $
+                {(
+                  dataGlobalMetrics.data.stablecoin_volume_24h / 1000000000
+                ).toFixed(2)}
+                B
+              </span>
+              , which is&nbsp;
+              <span className="stablecoin_market_cap_pourcentage">
+                {(
+                  (dataGlobalMetrics.data.stablecoin_volume_24h * 100) /
+                  dataGlobalMetrics.data.quote.USD.total_volume_24h
+                ).toFixed(2)}
+                %
+              </span>
+              &nbsp;of the total crypto market 24-hour volume.
+            </div>
+            <div className="threeText">
+              <div>
+                Bitcoin's price is currently&nbsp;
+                <span className="btc_price">
+                  $
+                  {SeparatorComma(
+                    dataCryptocurrencyListingsLatest.data[0].quote.USD.price.toFixed(
+                      2
+                    )
+                  )}
+                  .
+                </span>
+              </div>
+              <div>
+                Bitcoin's dominance is currently&nbsp;
+                <span className="btc_dominance">
+                  {dataGlobalMetrics.data.btc_dominance.toFixed(2)}%
+                </span>
+                , {btcDominance24hPercentageChange} over the day.
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
