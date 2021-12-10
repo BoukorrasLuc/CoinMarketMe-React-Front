@@ -14,19 +14,20 @@ import SeparatorComma from "../../Functions/SeparatorNumbComma";
 
 // Package
 import { useState } from "react";
+import Carousel from "react-grid-carousel";
 
 const Hero = ({ dataGlobalMetrics, dataCryptocurrencyListingsLatest }) => {
   // Condition D'affichage Read Less / Read More //
 
-  const [display, setDisplay] = useState(false);
+  const [displayRead, setDisplayRead] = useState(false);
 
   const onButtonClickHandler = () => {
-    setDisplay(!display);
+    setDisplayRead(!displayRead);
   };
 
   let trueFalse;
 
-  if (display) {
+  if (displayRead) {
     trueFalse = <>Read Less</>;
   } else {
     trueFalse = <>Read More</>;
@@ -144,39 +145,113 @@ const Hero = ({ dataGlobalMetrics, dataCryptocurrencyListingsLatest }) => {
     );
   }
 
+  // Condition D'affichage highlights
+
+  const [displayHighlights, setDisplayHighlights] = useState(false);
+
+  const onButtonClickHandlerHighlights = () => {
+    setDisplayHighlights(!displayHighlights);
+  };
+
   return (
     <div className="hero">
       <div className="carrousel">
-        <div className="one">
-          <img src={img1} alt="" />
+        <Carousel cols={(4, 5)} gap={0} loop containerStyle={{ width: "100%" }}>
+          <Carousel.Item>
+            <div className="one">
+              <img src={img1} alt="" />
+              <span>Crypto Report</span>
+              <span>Report: A Glimpse Into Crypto</span>
+            </div>
+          </Carousel.Item>
+          <Carousel.Item>
+            <div className="two">
+              <img src={img2} alt="" />
 
-          <span>Crypto Report</span>
-          <span>Report: A Glimpse Into Crypto</span>
-        </div>
-        <div className="two">
-          <img src={img2} alt="" />
-
-          <span>Crypto Tutorials</span>
-          <span>Metaverse Real Estate</span>
-        </div>
-        <div className="three">
-          <img src={img3} alt="" />
-          <span>Token Airdrop</span>
-          <span>$130K of 10 Alpha Pass Airdrop!</span>
-        </div>
-        <div className="four">
-          <img src={img4} alt="" />
-          <span>Learn & Earn</span>
-          <span>Join $400K NEAR Learning Campaign!</span>
-        </div>
-        <div className="five">
-          <img src={img5} alt="" />
-          <span>Podcast</span>
-          <span>Podcast: BTC Misses Price Target</span>
-        </div>
+              <span>Crypto Tutorials</span>
+              <span>Metaverse Real Estate</span>
+            </div>
+          </Carousel.Item>
+          <Carousel.Item>
+            <div className="three">
+              <img src={img3} alt="" />
+              <span>Token Airdrop</span>
+              <span>$130K of 10 Alpha Pass Airdrop!</span>
+            </div>
+          </Carousel.Item>
+          <Carousel.Item>
+            <div className="four">
+              <img src={img4} alt="" />
+              <span>Learn & Earn</span>
+              <span>Join $400K NEAR Learning Campaign!</span>
+            </div>
+          </Carousel.Item>
+          <Carousel.Item>
+            <div className="five">
+              <img src={img5} alt="" />
+              <span>Podcast</span>
+              <span>Podcast: BTC Misses Price Target</span>
+            </div>
+          </Carousel.Item>
+          <Carousel.Item>
+            <div className="six">
+              <img src={img5} alt="" />
+              <span>Podcast</span>
+              <span>Podcast: BTC Misses Price Target</span>
+            </div>
+          </Carousel.Item>
+          <Carousel.Item>
+            <div className="seven">
+              <img src={img5} alt="" />
+              <span>Podcast</span>
+              <span>Podcast: BTC Misses Price Target</span>
+            </div>
+          </Carousel.Item>
+          <Carousel.Item>
+            <div className="eight">
+              <img src={img5} alt="" />
+              <span>Podcast</span>
+              <span>Podcast: BTC Misses Price Target</span>
+            </div>
+          </Carousel.Item>
+          <Carousel.Item>
+            <div className="nine">
+              <img src={img5} alt="" />
+              <span>Podcast</span>
+              <span>Podcast: BTC Misses Price Target</span>
+            </div>
+          </Carousel.Item>
+          <Carousel.Item>
+            <div className="ten">
+              <img src={img5} alt="" />
+              <span>Podcast</span>
+              <span>Podcast: BTC Misses Price Target</span>
+            </div>
+          </Carousel.Item>
+        </Carousel>
       </div>
       <div className="todays-cryptocurrency-price">
-        <div className="title">Today's Cryptocurrency Prices by Market Cap</div>
+        <div className="contentTitle">
+          <div className="title">
+            Today's Cryptocurrency Prices by Market Cap
+          </div>
+          <div className="highlightsTitle">
+            Highlights
+            <div className="contentButton" id="toogle-button">
+              <input
+                type="checkbox"
+                id="checkbox-input"
+                onChange={onButtonClickHandlerHighlights}
+              />
+              <label
+                htmlFor="checkbox-input"
+                className="round-slider-container"
+              >
+                <div className="round-slider"></div>
+              </label>
+            </div>
+          </div>
+        </div>
 
         <span className="firstText">
           The global crypto market cap is&nbsp;
@@ -197,7 +272,7 @@ const Hero = ({ dataGlobalMetrics, dataCryptocurrencyListingsLatest }) => {
           <span onClick={onButtonClickHandler}>{trueFalse}</span>
         </span>
 
-        {display && (
+        {displayRead && (
           <>
             <div className="secondText">
               The total crypto market volume over the last 24 hours is&nbsp;
@@ -270,6 +345,15 @@ const Hero = ({ dataGlobalMetrics, dataCryptocurrencyListingsLatest }) => {
           </>
         )}
       </div>
+      {displayHighlights && (
+        <div className="highlights">
+          <div className="contentHighlights">
+            <div className="trending"></div>
+            <div className="biggestGainers"></div>
+            <div className="recentlyAdded"></div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
