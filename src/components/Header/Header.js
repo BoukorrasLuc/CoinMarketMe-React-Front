@@ -58,7 +58,7 @@ const Header = ({ dataCryptocurrencyListingsLatest, dataGlobalMetrics }) => {
             <span>Dominance</span>
             <span>:</span>
             <span>
-              BTC: {dataGlobalMetrics.data.btc_dominance.toFixed(2)}% ETH:
+              BTC: {dataGlobalMetrics.data.btc_dominance.toFixed(2)}% ETH:&nbsp;
               {dataGlobalMetrics.data.eth_dominance.toFixed(2)}%
             </span>
           </div>

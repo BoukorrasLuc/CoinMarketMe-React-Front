@@ -2,9 +2,11 @@
   display: flex;
   flex-direction: column;
   // height: 558px;
-  width: 100%;
+  width: 1280px;
+  margin: 0 auto;
 
-  padding: 0 14%;
+  // padding: 0 14%;
+
   .carrousel {
     display: flex;
     flex-direction: row;
@@ -235,7 +237,7 @@
       .trending,
       .biggestGainers,
       .recentlyAdded {
-        width: 448px;
+        width: 408px;
         height: 163px;
 
         box-shadow: rgb(88 102 126 / 8%) 0px 4px 24px,
@@ -285,18 +287,12 @@
         }
       }
       .biggestGainers {
-        width: 448px;
-        height: 163px;
-
         box-shadow: rgb(88 102 126 / 8%) 0px 4px 24px,
           rgb(88 102 126 / 12%) 0px 1px 2px;
         border-radius: 8px;
         padding: 14px 16px 17px;
       }
       .recentlyAdded {
-        width: 448px;
-        height: 163px;
-
         box-shadow: rgb(88 102 126 / 8%) 0px 4px 24px,
           rgb(88 102 126 / 12%) 0px 1px 2px;
         border-radius: 8px;
