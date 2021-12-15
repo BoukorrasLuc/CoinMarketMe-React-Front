@@ -74,11 +74,18 @@
   }
 
   .roads {
-    .currency {
-      width: 135.38px;
+    .currency,
+    .categories,
+    .defi,
+    .nft,
+    .metaverse,
+    .bsc,
+    .polkadot,
+    .solana,
+    .avalanche,
+    a.active {
       height: 32px;
       text-decoration: none;
-
       button {
         white-space: nowrap !important;
         color: rgb(88, 102, 126) !important;
@@ -106,304 +113,39 @@
           background-color: rgb(240, 246, 255);
         }
       }
+    }
+    .currency {
+      width: 135.38px;
     }
     .categories {
       width: 98.03px;
-      height: 32px;
-
-      text-decoration: none;
-
-      button {
-        white-space: nowrap !important;
-        color: rgb(88, 102, 126) !important;
-        margin-right: 4px !important;
-
-        -webkit-box-align: center;
-        align-items: center;
-        background: transparent;
-        border: 0px;
-        border-radius: 8px;
-        display: inline-flex;
-        color: rgb(0, 0, 0);
-        cursor: pointer;
-        -webkit-box-pack: center;
-        justify-content: center;
-        outline: 0px;
-        font-weight: 600;
-        width: auto;
-        height: 32px;
-        font-size: 12px;
-        padding: 0px 16px;
-        line-height: 18px;
-
-        &:hover {
-          background-color: rgb(240, 246, 255);
-        }
-      }
     }
     .defi {
       width: 62.02px;
-      height: 32px;
-
-      text-decoration: none;
-
-      button {
-        white-space: nowrap !important;
-        color: rgb(88, 102, 126) !important;
-        margin-right: 4px !important;
-
-        -webkit-box-align: center;
-        align-items: center;
-        background: transparent;
-        border: 0px;
-        border-radius: 8px;
-        display: inline-flex;
-        color: rgb(0, 0, 0);
-        cursor: pointer;
-        -webkit-box-pack: center;
-        justify-content: center;
-        outline: 0px;
-        font-weight: 600;
-        width: auto;
-        height: 32px;
-        font-size: 12px;
-        padding: 0px 16px;
-        line-height: 18px;
-
-        &:hover {
-          background-color: rgb(240, 246, 255);
-        }
-      }
     }
     .nft {
       width: 59.33px;
-      height: 32px;
-
-      text-decoration: none;
-
-      button {
-        white-space: nowrap !important;
-        color: rgb(88, 102, 126) !important;
-        margin-right: 4px !important;
-
-        -webkit-box-align: center;
-        align-items: center;
-        background: transparent;
-        border: 0px;
-        border-radius: 8px;
-        display: inline-flex;
-        color: rgb(0, 0, 0);
-        cursor: pointer;
-        -webkit-box-pack: center;
-        justify-content: center;
-        outline: 0px;
-        font-weight: 600;
-        width: auto;
-        height: 32px;
-        font-size: 12px;
-        padding: 0px 16px;
-        line-height: 18px;
-
-        &:hover {
-          background-color: rgb(240, 246, 255);
-        }
-      }
     }
     .metaverse {
       width: 94.72px;
-      height: 32px;
-
-      text-decoration: none;
-
-      button {
-        white-space: nowrap !important;
-        color: rgb(88, 102, 126) !important;
-        margin-right: 4px !important;
-
-        -webkit-box-align: center;
-        align-items: center;
-        background: transparent;
-        border: 0px;
-        border-radius: 8px;
-        display: inline-flex;
-        color: rgb(0, 0, 0);
-        cursor: pointer;
-        -webkit-box-pack: center;
-        justify-content: center;
-        outline: 0px;
-        font-weight: 600;
-        width: auto;
-        height: 32px;
-        font-size: 12px;
-        padding: 0px 16px;
-        line-height: 18px;
-
-        &:hover {
-          background-color: rgb(240, 246, 255);
-        }
-      }
     }
     .polkadot {
       width: 86.67px;
-      height: 32px;
-
-      text-decoration: none;
-
-      button {
-        white-space: nowrap !important;
-        color: rgb(88, 102, 126) !important;
-        margin-right: 4px !important;
-
-        -webkit-box-align: center;
-        align-items: center;
-        background: transparent;
-        border: 0px;
-        border-radius: 8px;
-        display: inline-flex;
-        color: rgb(0, 0, 0);
-        cursor: pointer;
-        -webkit-box-pack: center;
-        justify-content: center;
-        outline: 0px;
-        font-weight: 600;
-        width: auto;
-        height: 32px;
-        font-size: 12px;
-        padding: 0px 16px;
-        line-height: 18px;
-
-        &:hover {
-          background-color: rgb(240, 246, 255);
-        }
-      }
     }
     .bsc {
       width: 61.34px;
-      height: 32px;
-
-      text-decoration: none;
-
-      button {
-        white-space: nowrap !important;
-        color: rgb(88, 102, 126) !important;
-        margin-right: 4px !important;
-
-        -webkit-box-align: center;
-        align-items: center;
-        background: transparent;
-        border: 0px;
-        border-radius: 8px;
-        display: inline-flex;
-        color: rgb(0, 0, 0);
-        cursor: pointer;
-        -webkit-box-pack: center;
-        justify-content: center;
-        outline: 0px;
-        font-weight: 600;
-        width: auto;
-        height: 32px;
-        font-size: 12px;
-        padding: 0px 16px;
-        line-height: 18px;
-
-        &:hover {
-          background-color: rgb(240, 246, 255);
-        }
-      }
     }
     .solana {
       width: 75.36px;
-      height: 32px;
-
-      text-decoration: none;
-
-      button {
-        white-space: nowrap !important;
-        color: rgb(88, 102, 126) !important;
-        margin-right: 4px !important;
-
-        -webkit-box-align: center;
-        align-items: center;
-        background: transparent;
-        border: 0px;
-        border-radius: 8px;
-        display: inline-flex;
-        color: rgb(0, 0, 0);
-        cursor: pointer;
-        -webkit-box-pack: center;
-        justify-content: center;
-        outline: 0px;
-        font-weight: 600;
-        width: auto;
-        height: 32px;
-        font-size: 12px;
-        padding: 0px 16px;
-        line-height: 18px;
-
-        &:hover {
-          background-color: rgb(240, 246, 255);
-        }
-      }
     }
     .avalanche {
       width: 95.75px;
-      height: 32px;
-
-      text-decoration: none;
-
-      button {
-        white-space: nowrap !important;
-        color: rgb(88, 102, 126) !important;
-        margin-right: 4px !important;
-
-        -webkit-box-align: center;
-        align-items: center;
-        background: transparent;
-        border: 0px;
-        border-radius: 8px;
-        display: inline-flex;
-        color: rgb(0, 0, 0);
-        cursor: pointer;
-        -webkit-box-pack: center;
-        justify-content: center;
-        outline: 0px;
-        font-weight: 600;
-        width: auto;
-        height: 32px;
-        font-size: 12px;
-        padding: 0px 16px;
-        line-height: 18px;
-
-        &:hover {
-          background-color: rgb(240, 246, 255);
-        }
-      }
     }
 
     a.active {
       button {
-        white-space: nowrap !important;
-        margin-right: 4px !important;
         background-color: rgb(240, 246, 255) !important;
         color: rgb(56, 97, 251) !important;
-
-        -webkit-box-align: center;
-        align-items: center;
-        background: transparent;
-        border: 0px;
-        border-radius: 8px;
-        display: inline-flex;
-        color: rgb(0, 0, 0);
-        cursor: pointer;
-        -webkit-box-pack: center;
-        justify-content: center;
-        outline: 0px;
-        font-weight: 600;
-        width: auto;
-        height: 32px;
-        font-size: 12px;
-        padding: 0px 16px;
-        line-height: 18px;
       }
     }
   }
@@ -460,10 +202,11 @@
       display: flex;
       -webkit-box-align: center;
       align-items: center;
-      button:nth-child(1) {
-        width: 72.02px;
-        height: 32px;
 
+      button:nth-child(1),
+      button:nth-child(2),
+      button:nth-child(3) {
+        height: 32px;
         -webkit-box-align: center;
         align-items: center;
         background: rgb(239, 242, 245);
@@ -477,9 +220,11 @@
         outline: 0px;
         font-weight: 600;
         width: auto;
-        height: 32px;
-        font-size: 12px;
+      }
 
+      button:nth-child(1),
+      button:nth-child(2) {
+        font-size: 12px;
         line-height: 18px;
         padding: 0px 8px;
         margin-left: 2px;
@@ -505,83 +250,31 @@
           }
         }
       }
+
+      button:nth-child(1) {
+        width: 72.02px;
+      }
+
       button:nth-child(2) {
         width: 98.66px;
-        height: 32px;
 
         padding: 0px 8px;
         margin-left: 8px !important;
         color: unset !important;
-
-        -webkit-box-align: center;
-        align-items: center;
-        background: rgb(239, 242, 245);
-        border: 0px;
-        border-radius: 8px;
-        display: inline-flex;
-        cursor: pointer;
-        -webkit-box-pack: center;
-        justify-content: center;
-        outline: 0px;
-        font-weight: 600;
-        width: auto;
-        height: 32px;
-        font-size: 12px;
-
-        line-height: 18px;
-        padding: 0px 8px;
-        margin-left: 2px;
-
-        span {
-          -webkit-box-align: center;
-          align-items: center;
-          display: flex;
-          -webkit-box-pack: center;
-          justify-content: center;
-          margin-left: 0px;
-          margin-right: 8px;
-
-          color: #a6b0c3;
-        }
-
-        &:hover {
-          background: rgb(229, 242, 245);
-          span:nth-child(1) {
-            i {
-              color: #000000;
-            }
-          }
-        }
       }
       button:nth-child(3) {
         width: 66px;
-        height: 32px;
 
         padding: 3px;
         margin-left: 5px;
 
-        -webkit-box-align: center;
-        align-items: center;
-        background: rgb(239, 242, 245);
-        border: 0px;
-        border-radius: 8px;
-        display: inline-flex;
-        color: rgb(0, 0, 0);
-        cursor: pointer;
-        -webkit-box-pack: center;
-        justify-content: center;
-        outline: 0px;
-        font-weight: 600;
-        width: auto;
         font-size: 14px;
         line-height: 24px;
 
         span:nth-child(1) {
-          width: 30px;
-          height: 26px;
-          border-radius: 6px;
           background: #fff;
         }
+        span:nth-child(1),
         span:nth-child(2) {
           width: 30px;
           height: 26px;
