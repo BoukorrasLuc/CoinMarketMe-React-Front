@@ -224,13 +224,17 @@
     }
   }
   .highlights {
+    font-family: "Inter", sans-serif;
+
     .contentHighlights {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 50px;
-      .trending {
+      .trending,
+      .biggestGainers,
+      .recentlyAdded {
         width: 448px;
         height: 163px;
 
@@ -238,6 +242,47 @@
           rgb(88 102 126 / 12%) 0px 1px 2px;
         border-radius: 8px;
         padding: 14px 16px 17px;
+        .top {
+          display: flex;
+          flex-direction: row;
+          div:nth-child(1) {
+            display: flex;
+            align-items: center;
+
+            width: 416px;
+            height: 24px;
+            img {
+              width: 24px;
+              height: 24px;
+              margin-right: 10px;
+            }
+            span {
+              font-weight: bold;
+              font-size: 16px;
+              color: #000;
+            }
+          }
+          div:nth-child(2) {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            width: 55.78px;
+            height: 22.5px;
+
+            color: rgb(56, 97, 251);
+            text-decoration: none;
+            cursor: pointer;
+            span {
+              display: flex;
+              -webkit-box-align: center;
+              align-items: center;
+              font-weight: 600;
+              font-size: 12px;
+            }
+          }
+        }
       }
       .biggestGainers {
         width: 448px;

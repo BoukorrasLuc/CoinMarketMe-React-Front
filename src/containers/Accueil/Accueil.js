@@ -1,17 +1,17 @@
 // Scss
 import "./Accueil.scss";
 
-import Listings from "../../components/Listings/Listings";
-import Hero from "../../components/Hero/Hero";
+import ListingsCryptocurrencies from "../../components/Listings/ListingsCryptocurrencies/ListingsCryptocurrencies";
+import HeroCryptocurrencies from "../../components/Hero/HeroCryptocurrencies/HeroCryptocurrencies";
 
 const Accueil = ({ dataCryptocurrencyListingsLatest, dataGlobalMetrics }) => {
   return (
     <div className="accueil">
-      <Hero
+      <HeroCryptocurrencies
         dataGlobalMetrics={dataGlobalMetrics}
         dataCryptocurrencyListingsLatest={dataCryptocurrencyListingsLatest}
       />
-      <Listings
+      <ListingsCryptocurrencies
         dataCryptocurrencyListingsLatest={dataCryptocurrencyListingsLatest}
       />
     </div>

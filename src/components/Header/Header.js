@@ -114,11 +114,11 @@ const Header = ({ dataCryptocurrencyListingsLatest, dataGlobalMetrics }) => {
             </div>
             <div></div>
             <div>
-              <Link to="/">Exchange</Link>
+              <Link to="/rankings-exchanges">Exchange</Link>
             </div>
             <div></div>
             <div>
-              <Link to="/">NFT</Link>
+              <Link to="/nft">NFT</Link>
             </div>
             <div></div>
             <div>
@@ -126,7 +126,7 @@ const Header = ({ dataCryptocurrencyListingsLatest, dataGlobalMetrics }) => {
             </div>
             <div></div>
             <div>
-              <Link to="/">Watchlist</Link>
+              <Link to="/watchlist">Watchlist</Link>
             </div>
             <div></div>
             <div>

@@ -1,11 +1,61 @@
-import "./Listings.scss";
+// Scss
+import "./ListingsCryptocurrencies.scss";
 
-const Listings = ({ dataCryptocurrencyListingsLatest }) => {
+// Packages
+import { useState } from "react";
+
+// Components
+import Navbar from "../../Navbar/Navbar";
+
+const ListingsCryptocurrencies = ({ dataCryptocurrencyListingsLatest }) => {
+  // Sort CmcRank
+
+  let items = [dataCryptocurrencyListingsLatest.data];
+
+  const [sortCmcRank, setSortCmcRack] = useState(true);
+
+  const onClickHandlerCmcRank = () => {
+    setSortCmcRack(!sortCmcRank);
+  };
+
+  if (sortCmcRank) {
+    items[0].sort(function (a, b) {
+      return a.cmc_rank - b.cmc_rank;
+    });
+  } else {
+    items[0].sort(function (a, b) {
+      return b.cmc_rank - a.cmc_rank;
+    });
+  }
+
+  // Sort Name
+
+  // var items = [
+  //   { name: "a", value: 21 },
+  //   { name: "b", value: 37 },
+  //   { name: "c", value: 45 },
+  //   { name: "d", value: -12 },
+  //   { name: "e", value: 13 },
+  //   { name: "f", value: 37 },
+  // ];
+  // items.sort(function (a, b) {
+  //   if (a.name > b.name) {
+  //     return 1;
+  //   }
+  //   if (b.name > a.name) {
+  //     return -1;
+  //   }
+  //   return 0;
+  // });
+
+  // console.log(items);
+
   return (
     <div className="listings">
+      <Navbar />
       <div className="info">
         <div></div>
-        <div>
+        <div onClick={onClickHandlerCmcRank}>
           <p>#</p>
         </div>
         <div>
@@ -83,4 +133,4 @@ const Listings = ({ dataCryptocurrencyListingsLatest }) => {
     </div>
   );
 };
-export default Listings;
+export default ListingsCryptocurrencies;

@@ -1,16 +1,20 @@
 // Scss
-import "./Hero.scss";
+import "./HeroCryptocurrencies.scss";
 
 // Img
-import img1 from "../../Asset/img/1638237499619_Webp.net-compress-image.jpg";
-import img2 from "../../Asset/img/1638574368329_Metaverse Real Estate (1).jpg";
-import img3 from "../../Asset/img/1638538086375_Airdrop-Sandbox-Graphic-280x136.jpg";
-import img4 from "../../Asset/img/1638532906356_Meta image 280x136.png";
-import img5 from "../../Asset/img/1631754270064_Frame 48.png";
+import img1 from "../../../Asset/img/1638237499619_Webp.net-compress-image.jpg";
+import img2 from "../../../Asset/img/1638574368329_Metaverse Real Estate (1).jpg";
+import img3 from "../../../Asset/img/1638538086375_Airdrop-Sandbox-Graphic-280x136.jpg";
+import img4 from "../../../Asset/img/1638532906356_Meta image 280x136.png";
+import img5 from "../../../Asset/img/1631754270064_Frame 48.png";
+
+import trendingImg from "../../../Asset/img/TrendingIcon.png";
+import AddImg from "../../../Asset/img/AddIcon.png";
+import GainnerImg from "../../../Asset/img/GainnerIcon.png";
 
 // Fucntion
-import SeparatorPoint from "../../Functions/SeparatorNumbPoint";
-import SeparatorComma from "../../Functions/SeparatorNumbComma";
+import SeparatorPoint from "../../../Functions/SeparatorNumbPoint";
+import SeparatorComma from "../../../Functions/SeparatorNumbComma";
 
 // Package
 import { useState } from "react";
@@ -348,9 +352,45 @@ const Hero = ({ dataGlobalMetrics, dataCryptocurrencyListingsLatest }) => {
       {displayHighlights && (
         <div className="highlights">
           <div className="contentHighlights">
-            <div className="trending"></div>
-            <div className="biggestGainers"></div>
-            <div className="recentlyAdded"></div>
+            <div className="trending">
+              <div className="top">
+                <div>
+                  <img src={trendingImg} alt="trending" />
+                  <span>Trending</span>
+                </div>
+
+                <div>
+                  <span>More</span>
+                  <i className="fas fa-chevron-right"></i>
+                </div>
+              </div>
+            </div>
+            <div className="biggestGainers">
+              <div className="top">
+                <div>
+                  <img src={GainnerImg} alt="trending" />
+                  <span>Biggest Gainers</span>
+                </div>
+
+                <div>
+                  <span>More</span>
+                  <i className="fas fa-chevron-right"></i>
+                </div>
+              </div>
+            </div>
+            <div className="recentlyAdded">
+              <div className="top">
+                <div>
+                  <img src={AddImg} alt="trending" />
+                  <span>Recently Added</span>
+                </div>
+
+                <div>
+                  <span>More</span>
+                  <i className="fas fa-chevron-right"></i>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       )}
