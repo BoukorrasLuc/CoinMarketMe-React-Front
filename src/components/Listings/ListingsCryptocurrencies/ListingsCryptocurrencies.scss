@@ -142,10 +142,92 @@
     // margin: 0 5%;
     height: 80px;
 
-    border-bottom: solid 1px rgba(70, 70, 70, 0.179);
-    div {
-      width: calc(100% / 8);
-      text-align: center;
+    border-bottom: solid 1px #eff2f5;
+    > div:nth-child(1) {
+      background-color: aqua;
+
+      width: 36px;
+      padding: 10px;
+
+      i {
+        color: #a6b0c3;
+        height: 12px;
+      }
+    }
+    > div:nth-child(2) {
+      background-color: rgb(162, 161, 183);
+
+      width: 42.7px;
+      padding: 10px;
+      text-align: left;
+      p {
+        line-height: 1.5;
+        margin: 0px;
+        color: rgb(88, 102, 126);
+        font-size: 12px;
+      }
+    }
+    > div:nth-child(3) {
+      width: 214px;
+      // padding: 0 0 0 10px;
+      text-align: left;
+
+      background-color: rgb(255, 98, 0);
+
+      > div:nth-child(1) {
+        width: 208.47px;
+        height: 24px;
+
+        box-sizing: border-box;
+        margin: 0px;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+
+        background-color: rgb(242, 255, 0);
+
+        img {
+          height: 24px;
+          width: 24px;
+          border-radius: 12px;
+          margin-left: 5px;
+        }
+        div:nth-child(2) {
+          height: 24px;
+
+          display: flex;
+          align-items: center;
+          p:nth-child(1) {
+            margin: 0px 0px 0px 5px;
+            line-height: 24px;
+            font-size: 14px;
+            color: rgb(23, 25, 36);
+            font-weight: 600;
+
+            // background-color: aquamarine;
+          }
+          div:nth-child(2) {
+            // width: 34.14px;
+            height: 24px;
+
+            // background-color: brown;
+            div:nth-child(1) {
+              display: none;
+            }
+            p:nth-child(2) {
+              margin: 0px 0px 0px 6px;
+
+              font-size: 14px;
+              color: rgb(128, 138, 157);
+            }
+          }
+        }
+      }
+    }
+    > div:nth-child(4) {
+      background-color: brown;
+
+      width: 112px;
     }
   }
 }

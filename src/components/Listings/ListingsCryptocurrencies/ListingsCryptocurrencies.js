@@ -9,9 +9,7 @@ import Navbar from "../../Navbar/Navbar";
 
 const ListingsCryptocurrencies = ({ dataCryptocurrencyListingsLatest }) => {
   // Sort CmcRank
-
   let items = [dataCryptocurrencyListingsLatest.data];
-
   const [sortCmcRank, setSortCmcRack] = useState(true);
 
   const onClickHandlerCmcRank = () => {
@@ -47,8 +45,6 @@ const ListingsCryptocurrencies = ({ dataCryptocurrencyListingsLatest }) => {
   //   }
   //   return 0;
   // });
-
-  // console.log(items);
 
   return (
     <div className="listings">
@@ -105,8 +101,27 @@ const ListingsCryptocurrencies = ({ dataCryptocurrencyListingsLatest }) => {
 
         return (
           <div className="crypto-monnaies" key={id}>
-            <div>{crypto.cmc_rank}</div>
-            <div>{crypto.name}</div>
+            <div>
+              <i className="far fa-star"></i>
+            </div>
+            <div>
+              <p>{crypto.cmc_rank}</p>
+            </div>
+            <div>
+              <div>
+                <img
+                  src={`https://s2.coinmarketcap.com/static/img/coins/64x64/${crypto.id}.png`}
+                  alt={crypto.name}
+                />
+                <div>
+                  <p>{crypto.name}</p>
+                  <div>
+                    <div>1</div>
+                    <p>{crypto.symbol}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div>$ {crypto.quote.USD.price.toFixed(2)}</div>
             <div
               style={{
