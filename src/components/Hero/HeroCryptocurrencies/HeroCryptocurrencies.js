@@ -370,6 +370,9 @@ const Hero = ({ dataGlobalMetrics, dataCryptocurrencyListingsLatest }) => {
                 <div>
                   <img src={GainnerImg} alt="trending" />
                   <span>Biggest Gainers</span>
+                  <span> {dataCryptocurrencyListingsLatest.data.map((crypto, id) => { 
+
+                  })} </span>
                 </div>
 
                 <div>

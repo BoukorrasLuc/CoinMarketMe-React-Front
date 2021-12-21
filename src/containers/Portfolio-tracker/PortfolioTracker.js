@@ -8,17 +8,18 @@ const PortfolioTracker = ({
   dataCryptocurrencyListingsLatest,
   dataCryptocurrencyInfo,
   MesCryptos,
+  dataCryptocurrencyTrendingLatest
 }) => {
   // const saveStateToLocalStorage = () => {
-  //   localStorage.setItem("dataInfo", JSON.stringify(dataCryptocurrencyInfo));
+  //   localStorage.setItem("dataInfo", JSON.stringify(dataCryptocurrencyTrendingLatest));
   // };
 
   return (
     <div className="portfolio-tracker">
       Portfolio tracker
-      {/* <button onClick={saveStateToLocalStorage}>
+       {/* <button onClick={saveStateToLocalStorage}>
         Save State to local storage\
-      </button> */}
+      </button>  */}
       {/* <CardsCrypto
         logo={dataCryptocurrencyInfo.data[2586].logo}
         name={MesCryptos.Crypto[0].name}

@@ -7,6 +7,10 @@ import { useState } from "react";
 // Components
 import Navbar from "../../Navbar/Navbar";
 
+// Function
+
+import Separator from "../../../Functions/SeparatorNumbComma"
+
 const ListingsCryptocurrencies = ({ dataCryptocurrencyListingsLatest }) => {
   // Sort CmcRank
   let items = [dataCryptocurrencyListingsLatest.data];
@@ -46,6 +50,8 @@ const ListingsCryptocurrencies = ({ dataCryptocurrencyListingsLatest }) => {
   //   return 0;
   // });
 
+
+
   return (
     <div className="listings">
       <Navbar />
@@ -67,13 +73,16 @@ const ListingsCryptocurrencies = ({ dataCryptocurrencyListingsLatest }) => {
           <p>7d %</p>
         </div>
         <div>
-          <p>Market Cap</p>
+          <p>Market Cap</p>&nbsp;
+          <i className="fas fa-info-circle"></i>
         </div>
         <div>
-          <p>Volume (24h)</p>
+          <p>Volume (24h)</p>&nbsp;
+          <i className="fas fa-info-circle"></i>
         </div>
         <div>
-          <p>Circulating Supply</p>
+          <p>Circulating Supply</p>&nbsp;
+          <i className="fas fa-info-circle"></i>
         </div>
         <div></div>
         <div></div>
@@ -128,19 +137,23 @@ const ListingsCryptocurrencies = ({ dataCryptocurrencyListingsLatest }) => {
                 color: Math.sign(ChangeOneDay) === -1 ? "#FF4E50" : "#88C425",
               }}
             >
-              {crypto.quote.USD.percent_change_24h.toFixed(2)}
+              {crypto.quote.USD.percent_change_24h.toFixed(2)}%
             </div>
             <div
               style={{
                 color: Math.sign(ChangeSevenDay) === -1 ? "#FF4E50" : "#88C425",
               }}
             >
-              {crypto.quote.USD.percent_change_7d.toFixed(2)}
+              {crypto.quote.USD.percent_change_7d.toFixed(2)}%
             </div>
-            <div>$ {crypto.quote.USD.market_cap}</div>
-            <div>$ {crypto.quote.USD.volume_24h}</div>
+            <div>${Separator(crypto.quote.USD.market_cap.toFixed(0))}</div>
+            <div>${Separator(crypto.quote.USD.volume_24h.toFixed(0))}</div>
             <div>
-              {crypto.circulating_supply} {crypto.symbol}
+              
+              <div> {Separator(crypto.circulating_supply.toFixed(0))} {crypto.symbol}</div>
+<div>  {crypto.max_supply > 0 && (crypto.circulating_supply * 100 / crypto.max_supply).toFixed(2) } </div>
+
+              
             </div>
           </div>
         );

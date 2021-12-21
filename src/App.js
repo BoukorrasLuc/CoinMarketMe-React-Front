@@ -8,8 +8,7 @@ import dateFormat from "dateformat";
 
 // Datas
 import MesCryptos from "./Data/MyCrypto.json";
-// import cryptocurrencyListingsLatest from "./Data-CoinMarketCap/cryptocurrency-listings-latest.json"; // Data CoinMarketCap Cryptocurrency Listings Latest
-// import cryptocurrencyInfo from "./Data-CoinMarketCap/cryptocurrency-info.json"; // Data CoinMarketCap Cryptocurrency Info
+
 
 // Components
 import Header from "./components/Header/Header";
@@ -36,6 +35,7 @@ function App() {
 
   const [dataCryptocurrencyInfo, setDataCryptocurrencyInfo] = useState({});
   const [dataGlobalMetrics, setDataGlobalMetrics] = useState({});
+  const [dataCryptocurrencyTrendingLatest, setDataCryptocurrencyTrendingLatest] = useState({});
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -104,6 +104,11 @@ function App() {
       );
       setDataGlobalMetrics(responseGlobalMetrics.data);
 
+      // const responseCryptocurrencyTrendingLatest = await axios.get(
+      //   "http://localhost:3000/cryptocurrencyTrendingLatest"
+      // );
+      // setDataCryptocurrencyTrendingLatest(responseCryptocurrencyTrendingLatest.data);
+
       setIsLoading(false);
     };
     fetchData();
@@ -138,6 +143,7 @@ function App() {
               }
               dataCryptocurrencyInfo={dataCryptocurrencyInfo}
               MesCryptos={MesCryptos}
+              dataCryptocurrencyTrendingLatest={dataCryptocurrencyTrendingLatest}
             />
           }
         />
