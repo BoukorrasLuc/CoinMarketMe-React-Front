@@ -48,7 +48,7 @@
       width: 226.53px;
       height: 46.5px;
       padding: 11px 10px;
-background-color: darkmagenta;
+
       p {
         text-align: left;
       }
@@ -56,11 +56,10 @@ background-color: darkmagenta;
     div:nth-child(4) {
       display: flex;
       align-items: center;
-justify-content: flex-end;
+      justify-content: flex-end;
       width: 113.52px;
       height: 46.5px;
       padding: 11px 10px;
-      background-color: darkorange;
 
       p {
         text-align: right;
@@ -69,7 +68,7 @@ justify-content: flex-end;
     div:nth-child(5) {
       display: flex;
       align-items: center;
-justify-content: flex-end;
+      justify-content: flex-end;
       width: 79.69px;
       height: 46.5px;
       padding: 11px 10px;
@@ -81,7 +80,7 @@ justify-content: flex-end;
     div:nth-child(6) {
       display: flex;
       align-items: center;
-justify-content: flex-end;
+      justify-content: flex-end;
       width: 80.42px;
       height: 46.5px;
       padding: 11px 10px;
@@ -93,7 +92,7 @@ justify-content: flex-end;
     div:nth-child(7) {
       display: flex;
       align-items: center;
-justify-content: flex-end;
+      justify-content: flex-end;
       width: 168.14px;
       height: 46.5px;
       padding: 11px 10px;
@@ -102,13 +101,13 @@ justify-content: flex-end;
         text-align: right;
       }
       i {
-        color: #A6B0C3;
+        color: #a6b0c3;
       }
     }
     div:nth-child(8) {
       display: flex;
       align-items: center;
-justify-content: flex-end;
+      justify-content: flex-end;
       width: 178.8px;
       height: 46.5px;
       padding: 11px 10px;
@@ -117,13 +116,13 @@ justify-content: flex-end;
         text-align: right;
       }
       i {
-        color: #A6B0C3;
+        color: #a6b0c3;
       }
     }
     div:nth-child(9) {
       display: flex;
       align-items: center;
-justify-content: flex-end;
+      justify-content: flex-end;
       width: 200.69px;
       height: 46.5px;
       padding: 11px 10px;
@@ -132,7 +131,7 @@ justify-content: flex-end;
         text-align: right;
       }
       i {
-        color: #A6B0C3;
+        color: #a6b0c3;
       }
     }
     div:nth-child(10) {
@@ -145,8 +144,6 @@ justify-content: flex-end;
       width: 60.05px;
       height: 46.5px;
       padding: 11px 10px;
-      
-      
     }
   }
   .crypto-monnaies {
@@ -158,8 +155,6 @@ justify-content: flex-end;
 
     border-bottom: solid 1px #eff2f5;
     > div:nth-child(1) {
-      background-color: aqua;
-
       width: 36px;
       padding: 10px;
 
@@ -169,8 +164,6 @@ justify-content: flex-end;
       }
     }
     > div:nth-child(2) {
-      background-color: rgb(162, 161, 183);
-
       width: 42.7px;
       padding: 10px;
       text-align: left;
@@ -186,8 +179,6 @@ justify-content: flex-end;
       padding: 10px;
       text-align: left;
 
-      background-color: rgb(255, 98, 0);
-
       > div:nth-child(1) {
         width: 208.47px;
         height: 24px;
@@ -197,8 +188,6 @@ justify-content: flex-end;
         display: flex;
         -webkit-box-align: center;
         align-items: center;
-
-        background-color: rgb(242, 255, 0);
 
         img {
           height: 24px;
@@ -217,14 +206,10 @@ justify-content: flex-end;
             font-size: 14px;
             color: rgb(23, 25, 36);
             font-weight: 600;
-
-            // background-color: aquamarine;
           }
           div:nth-child(2) {
-            // width: 34.14px;
             height: 24px;
 
-            // background-color: brown;
             div:nth-child(1) {
               display: none;
             }
@@ -239,25 +224,23 @@ justify-content: flex-end;
       }
     }
     > div:nth-child(4) {
-      background-color: brown;
-padding: 10px;
+      padding: 10px;
       width: 107px;
       text-align: end;
       font-weight: 600;
       font-size: 14px;
-
     }
     > div:nth-child(5) {
       width: 71.89px;
-      background-color: rgb(255, 185, 127);
+
       padding: 8px;
       text-align: end;
       font-size: 14px;
       font-weight: 600;
     }
-    > div:nth-child(6){
+    > div:nth-child(6) {
       width: 77.89px;
-      background-color: burlywood;
+
       padding: 10px;
       text-align: end;
       font-size: 14px;
@@ -265,7 +248,7 @@ padding: 10px;
     }
     > div:nth-child(7) {
       width: 153.73px;
-      background-color: chocolate;
+
       padding: 8px;
       text-align: end;
       font-size: 14px;
@@ -273,7 +256,7 @@ padding: 10px;
     }
     > div:nth-child(8) {
       width: 165.64px;
-      background-color: darkcyan;
+
       padding: 9px;
       text-align: end;
       font-size: 14px;
@@ -281,7 +264,7 @@ padding: 10px;
     }
     > div:nth-child(9) {
       width: 190.73px;
-      background-color: darkmagenta;
+
       padding: 10px;
       text-align: end;
       font-size: 14px;
@@ -290,7 +273,7 @@ padding: 10px;
       flex-direction: column;
 
       > div {
-color:darkorange;
+        color: darkorange;
       }
     }
   }

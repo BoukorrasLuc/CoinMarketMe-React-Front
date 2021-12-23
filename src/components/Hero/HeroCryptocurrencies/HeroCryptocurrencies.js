@@ -157,6 +157,9 @@ const Hero = ({ dataGlobalMetrics, dataCryptocurrencyListingsLatest }) => {
     setDisplayHighlights(!displayHighlights);
   };
 
+  // Biggest Gainers
+  let biggestGainers = dataCryptocurrencyListingsLatest.data;
+
   return (
     <div className="hero">
       <div className="carrousel">
@@ -370,15 +373,51 @@ const Hero = ({ dataGlobalMetrics, dataCryptocurrencyListingsLatest }) => {
                 <div>
                   <img src={GainnerImg} alt="trending" />
                   <span>Biggest Gainers</span>
-                  <span> {dataCryptocurrencyListingsLatest.data.map((crypto, id) => { 
-
-                  })} </span>
+                  <span></span>
                 </div>
 
                 <div>
                   <span>More</span>
                   <i className="fas fa-chevron-right"></i>
                 </div>
+              </div>
+              <div>
+                {biggestGainers
+                  .sort(function (a, b) {
+                    return (
+                      b.quote.USD.percent_change_24h -
+                      a.quote.USD.percent_change_24h
+                    );
+                  })
+                  .slice(0, 3)
+                  .map((crypto, id) => {
+                    return (
+                      <div key={id} className="biggestGainersContentMap">
+                        <div>
+                          <span>{id + 1}</span>
+                          <div>
+                            <div>
+                              <img
+                                src={`https://s2.coinmarketcap.com/static/img/coins/64x64/${crypto.id}.png`}
+                                alt={crypto.name}
+                              />
+                            </div>
+                            <div>
+                              <p>{crypto.name}</p>
+                            </div>
+                          </div>
+
+                          <span>{crypto.symbol}</span>
+                        </div>
+                        <div>
+                          <i className="fas fa-sort-up"></i>
+                          <span>
+                            {crypto.quote.USD.percent_change_24h.toFixed(2)}%
+                          </span>
+                        </div>
+                      </div>
+                    );
+                  })}
               </div>
             </div>
             <div className="recentlyAdded">
