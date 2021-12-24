@@ -281,8 +281,11 @@
         height: 6px;
         border-radius: 3px;
         background: rgb(239, 242, 245);
-        width: 160px;
+        width: 150px;
       }
+    }
+    > div:nth-child(10) {
+      background-color: aquamarine;
     }
   }
 }

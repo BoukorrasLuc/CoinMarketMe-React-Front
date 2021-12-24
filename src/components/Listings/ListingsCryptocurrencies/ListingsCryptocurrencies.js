@@ -30,25 +30,7 @@ const ListingsCryptocurrencies = ({ dataCryptocurrencyListingsLatest }) => {
     });
   }
 
-  // Sort Name
-
-  // var items = [
-  //   { name: "a", value: 21 },
-  //   { name: "b", value: 37 },
-  //   { name: "c", value: 45 },
-  //   { name: "d", value: -12 },
-  //   { name: "e", value: 13 },
-  //   { name: "f", value: 37 },
-  // ];
-  // items.sort(function (a, b) {
-  //   if (a.name > b.name) {
-  //     return 1;
-  //   }
-  //   if (b.name > a.name) {
-  //     return -1;
-  //   }
-  //   return 0;
-  // });
+  console.log(dataCryptocurrencyListingsLatest);
 
   return (
     <div className="listings">
@@ -152,16 +134,24 @@ const ListingsCryptocurrencies = ({ dataCryptocurrencyListingsLatest }) => {
                 {crypto.symbol}
               </div>
 
-              {crypto.max_supply > 0 && (
-                <div>
-                  <ProgressBar
-                    percentage={(
-                      (crypto.circulating_supply * 100) /
-                      crypto.max_supply
-                    ).toFixed(2)}
-                  />
-                </div>
-              )}
+              {crypto.max_supply !== null &&
+                (crypto.circulating_supply * 100) / crypto.max_supply !==
+                  100 && (
+                  <div>
+                    <ProgressBar
+                      percentage={(
+                        (crypto.circulating_supply * 100) /
+                        crypto.max_supply
+                      ).toFixed(2)}
+                    />
+                  </div>
+                )}
+            </div>
+            <div>
+              {/* <img
+                src={`https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/${crypto.id}.svg`}
+                alt=""
+              /> */}
             </div>
           </div>
         );

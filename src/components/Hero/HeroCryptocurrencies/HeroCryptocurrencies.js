@@ -447,7 +447,15 @@ const Hero = ({ dataGlobalMetrics, dataCryptocurrencyListingsLatest }) => {
 
                     let cryptoPrice;
 
-                    if (crypto.quote.USD.price <= 0.00001) {
+                    if (crypto.quote.USD.price <= 0.0000001) {
+                      cryptoPrice = (
+                        <span>${crypto.quote.USD.price.toFixed(11)}</span>
+                      );
+                    } else if (crypto.quote.USD.price <= 0.000001) {
+                      cryptoPrice = (
+                        <span>${crypto.quote.USD.price.toFixed(10)}</span>
+                      );
+                    } else if (crypto.quote.USD.price <= 0.00001) {
                       cryptoPrice = (
                         <span>${crypto.quote.USD.price.toFixed(9)}</span>
                       );

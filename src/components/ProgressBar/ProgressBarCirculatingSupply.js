@@ -4,11 +4,10 @@ const Tracker = styled.div`
   height: 6px;
   border-radius: 3px;
   background: rgb(207, 214, 228);
-  width: 145px;
 `;
 
-const ProgressBar = () => {
-  return <Tracker></Tracker>;
+const ProgressBar = ({ percentage }) => {
+  return <Tracker style={{ width: `${percentage}%` }}></Tracker>;
 };
 
 export default ProgressBar;
