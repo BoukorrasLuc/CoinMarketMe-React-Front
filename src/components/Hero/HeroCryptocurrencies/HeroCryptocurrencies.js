@@ -160,6 +160,9 @@ const Hero = ({ dataGlobalMetrics, dataCryptocurrencyListingsLatest }) => {
   // Biggest Gainers
   let biggestGainers = dataCryptocurrencyListingsLatest.data;
 
+  // Recently Added
+  let recentlyAdded = dataCryptocurrencyListingsLatest.data;
+
   return (
     <div className="hero">
       <div className="carrousel">
@@ -431,6 +434,65 @@ const Hero = ({ dataGlobalMetrics, dataCryptocurrencyListingsLatest }) => {
                   <span>More</span>
                   <i className="fas fa-chevron-right"></i>
                 </div>
+              </div>
+
+              <div>
+                {recentlyAdded
+                  .sort(function (a, b) {
+                    return new Date(b.date_added) - new Date(a.date_added);
+                  })
+                  .slice(0, 3)
+                  .map((crypto, id) => {
+                    // Convertion du prix exponential
+
+                    let cryptoPrice;
+
+                    if (crypto.quote.USD.price <= 0.00001) {
+                      cryptoPrice = (
+                        <span>${crypto.quote.USD.price.toFixed(9)}</span>
+                      );
+                    } else if (crypto.quote.USD.price <= 0.0001) {
+                      cryptoPrice = (
+                        <span>${crypto.quote.USD.price.toFixed(8)}</span>
+                      );
+                    } else if (crypto.quote.USD.price <= 0.001) {
+                      cryptoPrice = (
+                        <span>${crypto.quote.USD.price.toFixed(7)}</span>
+                      );
+                    } else if (crypto.quote.USD.price <= 0.01) {
+                      cryptoPrice = (
+                        <span>${crypto.quote.USD.price.toFixed(6)}</span>
+                      );
+                    } else {
+                      cryptoPrice = (
+                        <span>${crypto.quote.USD.price.toFixed(5)}</span>
+                      );
+                    }
+
+                    return (
+                      <div key={id} className="recentlyAddedContentMap">
+                        <div>
+                          <span>{id + 1}</span>
+                          <div>
+                            <div>
+                              <img
+                                src={`https://s2.coinmarketcap.com/static/img/coins/64x64/${crypto.id}.png`}
+                                alt={crypto.name}
+                              />
+                            </div>
+                            <div>
+                              <p>{crypto.name}</p>
+                            </div>
+                          </div>
+
+                          <span>{crypto.symbol}</span>
+                        </div>
+                        <div>
+                          <span>{cryptoPrice}</span>
+                        </div>
+                      </div>
+                    );
+                  })}
               </div>
             </div>
           </div>

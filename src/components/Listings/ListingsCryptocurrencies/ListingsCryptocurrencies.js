@@ -6,10 +6,10 @@ import { useState } from "react";
 
 // Components
 import Navbar from "../../Navbar/Navbar";
+import ProgressBar from "../../ProgressBar/ProgressBarCirculatingSupply";
 
 // Function
-
-import Separator from "../../../Functions/SeparatorNumbComma"
+import Separator from "../../../Functions/SeparatorNumbComma";
 
 const ListingsCryptocurrencies = ({ dataCryptocurrencyListingsLatest }) => {
   // Sort CmcRank
@@ -49,8 +49,6 @@ const ListingsCryptocurrencies = ({ dataCryptocurrencyListingsLatest }) => {
   //   }
   //   return 0;
   // });
-
-
 
   return (
     <div className="listings">
@@ -95,7 +93,7 @@ const ListingsCryptocurrencies = ({ dataCryptocurrencyListingsLatest }) => {
         if (ChangeOneDay <= 0) {
           <span style={{ color: "#FF4E50" }}>{ChangeOneDay.toFixed(2)}%</span>;
         } else {
-          <span style={{ color: "#88C425" }}>{ChangeOneDay.toFixed(2)}%</span>;
+          <span style={{ color: "#16c784" }}>{ChangeOneDay.toFixed(2)}%</span>;
         }
 
         if (ChangeSevenDay <= 0) {
@@ -103,7 +101,7 @@ const ListingsCryptocurrencies = ({ dataCryptocurrencyListingsLatest }) => {
             {ChangeSevenDay.toFixed(2)}%
           </span>;
         } else {
-          <span style={{ color: "#88C425" }}>
+          <span style={{ color: "#16c784" }}>
             {ChangeSevenDay.toFixed(2)}%
           </span>;
         }
@@ -134,14 +132,14 @@ const ListingsCryptocurrencies = ({ dataCryptocurrencyListingsLatest }) => {
             <div>$ {crypto.quote.USD.price.toFixed(2)}</div>
             <div
               style={{
-                color: Math.sign(ChangeOneDay) === -1 ? "#FF4E50" : "#88C425",
+                color: Math.sign(ChangeOneDay) === -1 ? "#FF4E50" : "#16c784",
               }}
             >
               {crypto.quote.USD.percent_change_24h.toFixed(2)}%
             </div>
             <div
               style={{
-                color: Math.sign(ChangeSevenDay) === -1 ? "#FF4E50" : "#88C425",
+                color: Math.sign(ChangeSevenDay) === -1 ? "#FF4E50" : "#16c784",
               }}
             >
               {crypto.quote.USD.percent_change_7d.toFixed(2)}%
@@ -149,11 +147,21 @@ const ListingsCryptocurrencies = ({ dataCryptocurrencyListingsLatest }) => {
             <div>${Separator(crypto.quote.USD.market_cap.toFixed(0))}</div>
             <div>${Separator(crypto.quote.USD.volume_24h.toFixed(0))}</div>
             <div>
-              
-              <div> {Separator(crypto.circulating_supply.toFixed(0))} {crypto.symbol}</div>
-<div>  {crypto.max_supply > 0 && (crypto.circulating_supply * 100 / crypto.max_supply).toFixed(2) } </div>
+              <div>
+                {Separator(crypto.circulating_supply.toFixed(0))}{" "}
+                {crypto.symbol}
+              </div>
 
-              
+              {crypto.max_supply > 0 && (
+                <div>
+                  <ProgressBar
+                    percentage={(
+                      (crypto.circulating_supply * 100) /
+                      crypto.max_supply
+                    ).toFixed(2)}
+                  />
+                </div>
+              )}
             </div>
           </div>
         );
