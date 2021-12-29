@@ -4,7 +4,7 @@ import "./Navbar.scss";
 // Packages
 import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ postsPerPage }) => {
   return (
     <div className="navbar">
       <div className="watPort">
@@ -89,7 +89,7 @@ const Navbar = () => {
         <div>
           <p>Show Rows</p>
           <div>
-            100
+            {postsPerPage}
             <span>
               <i className="fas fa-sort-down"></i>
             </span>

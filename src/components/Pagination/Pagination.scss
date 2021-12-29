@@ -1,0 +1,88 @@
+.page-number-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin: 16px 0px 40px;
+  font-family: "Inter", sans-serif;
+
+  .text-pagination {
+    // width: 00px;
+    height: 21px;
+    line-height: 1.5;
+    margin: 0px;
+    color: rgb(23, 25, 36);
+    font-size: 14px;
+  }
+
+  .pagination-container {
+    display: block;
+    width: 352px;
+    height: 32px;
+
+    .page-numbers {
+      display: inline-flex;
+      min-width: 32px;
+      height: 32px;
+      margin-right: 4px;
+      -webkit-box-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      align-items: center;
+      border-radius: 8px;
+      outline: 0px;
+      cursor: pointer;
+      user-select: none;
+      font-weight: 600;
+      color: rgb(23, 25, 36);
+
+      &:hover {
+        cursor: pointer;
+      }
+      a {
+        color: rgb(0, 0, 0);
+      }
+      a.active {
+        background: rgb(56, 97, 251) !important;
+      }
+    }
+  }
+
+  .show-rows {
+    // width: 130.16px;
+    height: 32px;
+
+    box-sizing: border-box;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    > p {
+      line-height: 1.5;
+      margin: 0px 6px 0px 0px;
+      color: rgb(88, 102, 126);
+      font-size: 14px;
+    }
+    > div {
+      box-sizing: border-box;
+      margin: 0px;
+      display: inline-flex;
+      flex-direction: row;
+      -webkit-box-align: center;
+      align-items: center;
+      background: rgb(239, 242, 245);
+      border-radius: 8px;
+      outline: 0px;
+      font-weight: 600;
+      cursor: pointer;
+      color: rgb(0, 0, 0);
+      padding: 5px 8px;
+      font-size: 12px;
+      line-height: 22px;
+    }
+  }
+}

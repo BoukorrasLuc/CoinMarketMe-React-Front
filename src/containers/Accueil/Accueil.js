@@ -4,7 +4,13 @@ import "./Accueil.scss";
 import ListingsCryptocurrencies from "../../components/Listings/ListingsCryptocurrencies/ListingsCryptocurrencies";
 import HeroCryptocurrencies from "../../components/Hero/HeroCryptocurrencies/HeroCryptocurrencies";
 
-const Accueil = ({ dataCryptocurrencyListingsLatest, dataGlobalMetrics }) => {
+const Accueil = ({
+  dataCryptocurrencyListingsLatest,
+  dataGlobalMetrics,
+  currentPage,
+  postsPerPage,
+  setCurrentPage,
+}) => {
   return (
     <div className="accueil">
       <HeroCryptocurrencies
@@ -13,6 +19,9 @@ const Accueil = ({ dataCryptocurrencyListingsLatest, dataGlobalMetrics }) => {
       />
       <ListingsCryptocurrencies
         dataCryptocurrencyListingsLatest={dataCryptocurrencyListingsLatest}
+        currentPage={currentPage}
+        postsPerPage={postsPerPage}
+        setCurrentPage={setCurrentPage}
       />
     </div>
   );

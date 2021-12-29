@@ -7,11 +7,17 @@ import { useState } from "react";
 // Components
 import Navbar from "../../Navbar/Navbar";
 import ProgressBar from "../../ProgressBar/ProgressBarCirculatingSupply";
+import Pagination from "../../Pagination/Pagination";
 
 // Function
 import Separator from "../../../Functions/SeparatorNumbComma";
 
-const ListingsCryptocurrencies = ({ dataCryptocurrencyListingsLatest }) => {
+const ListingsCryptocurrencies = ({
+  dataCryptocurrencyListingsLatest,
+  currentPage,
+  postsPerPage,
+  setCurrentPage,
+}) => {
   // Sort CmcRank
   let items = [dataCryptocurrencyListingsLatest.data];
   const [sortCmcRank, setSortCmcRack] = useState(true);
@@ -30,11 +36,16 @@ const ListingsCryptocurrencies = ({ dataCryptocurrencyListingsLatest }) => {
     });
   }
 
-  console.log(dataCryptocurrencyListingsLatest);
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = dataCryptocurrencyListingsLatest.data.slice(
+    indexOfFirstPost,
+    indexOfLastPost
+  );
 
   return (
     <div className="listings">
-      <Navbar />
+      <Navbar postsPerPage={postsPerPage} />
       <div className="info">
         <div></div>
         <div onClick={onClickHandlerCmcRank}>
@@ -68,7 +79,7 @@ const ListingsCryptocurrencies = ({ dataCryptocurrencyListingsLatest }) => {
         <div></div>
       </div>
 
-      {dataCryptocurrencyListingsLatest.data.map((crypto, id) => {
+      {currentPosts.map((crypto, id) => {
         const ChangeOneDay = crypto.quote.USD.percent_change_24h;
         const ChangeSevenDay = crypto.quote.USD.percent_change_7d;
 
@@ -135,8 +146,8 @@ const ListingsCryptocurrencies = ({ dataCryptocurrencyListingsLatest }) => {
               </div>
 
               {crypto.max_supply !== null &&
-                (crypto.circulating_supply * 100) / crypto.max_supply !==
-                  100 && (
+                (crypto.circulating_supply * 100) / crypto.max_supply !== 100 &&
+                crypto.max_supply > crypto.circulating_supply && (
                   <div>
                     <ProgressBar
                       percentage={(
@@ -156,6 +167,12 @@ const ListingsCryptocurrencies = ({ dataCryptocurrencyListingsLatest }) => {
           </div>
         );
       })}
+      <Pagination
+        dataCryptocurrencyListingsLatest={dataCryptocurrencyListingsLatest}
+        postsPerPage={postsPerPage}
+        setCurrentPage={setCurrentPage}
+        currentPage={currentPage}
+      />
     </div>
   );
 };

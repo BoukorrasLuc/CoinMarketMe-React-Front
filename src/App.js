@@ -9,7 +9,6 @@ import dateFormat from "dateformat";
 // Datas
 import MesCryptos from "./Data/MyCrypto.json";
 
-
 // Components
 import Header from "./components/Header/Header";
 
@@ -28,6 +27,7 @@ import ViewSolana from "./containers/View-solana/ViewSolana";
 import ViewAvalanche from "./containers/View-avalanche/ViewAvalanche";
 
 function App() {
+  // Data
   const [
     dataCryptocurrencyListingsLatest,
     setDataCryptocurrencyListingsLatest,
@@ -35,9 +35,14 @@ function App() {
 
   const [dataCryptocurrencyInfo, setDataCryptocurrencyInfo] = useState({});
   const [dataGlobalMetrics, setDataGlobalMetrics] = useState({});
-  const [dataCryptocurrencyTrendingLatest, setDataCryptocurrencyTrendingLatest] = useState({});
+  const [dataCryptocurrencyTrendingLatest] = useState({});
 
+  // Loading
   const [isLoading, setIsLoading] = useState(true);
+
+  // Pagination
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(300);
 
   dateFormat.i18n = {
     dayNames: [
@@ -107,7 +112,9 @@ function App() {
       // const responseCryptocurrencyTrendingLatest = await axios.get(
       //   "http://localhost:3000/cryptocurrencyTrendingLatest"
       // );
-      // setDataCryptocurrencyTrendingLatest(responseCryptocurrencyTrendingLatest.data);
+      // setDataCryptocurrencyTrendingLatest(
+      //   responseCryptocurrencyTrendingLatest.data
+      // );
 
       setIsLoading(false);
     };
@@ -131,6 +138,9 @@ function App() {
                 dataCryptocurrencyListingsLatest
               }
               dataGlobalMetrics={dataGlobalMetrics}
+              currentPage={currentPage}
+              postsPerPage={postsPerPage}
+              setCurrentPage={setCurrentPage}
             />
           }
         />
@@ -143,7 +153,9 @@ function App() {
               }
               dataCryptocurrencyInfo={dataCryptocurrencyInfo}
               MesCryptos={MesCryptos}
-              dataCryptocurrencyTrendingLatest={dataCryptocurrencyTrendingLatest}
+              dataCryptocurrencyTrendingLatest={
+                dataCryptocurrencyTrendingLatest
+              }
             />
           }
         />
