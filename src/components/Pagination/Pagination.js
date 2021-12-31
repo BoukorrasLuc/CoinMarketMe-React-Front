@@ -1,6 +1,9 @@
 // Scss
 import "./Pagination.scss";
 
+// Packages
+import { Link } from "react-router-dom";
+
 const pagination = ({
   dataCryptocurrencyListingsLatest,
   postsPerPage,
@@ -16,8 +19,6 @@ const pagination = ({
     pageNumbers.push(i);
   }
   const paginate = (pageNumbers) => setCurrentPage(pageNumbers);
-
-  console.log(dataCryptocurrencyListingsLatest);
 
   return (
     <div className="page-number-container">
@@ -35,7 +36,7 @@ const pagination = ({
             className="page-numbers"
             onClick={() => paginate(number)}
           >
-            <a>{number}</a>
+            <p>{number}</p>
           </div>
         ))}
       </div>

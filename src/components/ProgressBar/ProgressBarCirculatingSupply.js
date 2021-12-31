@@ -1,13 +1,9 @@
-import styled from "styled-components";
-
-const Tracker = styled.div`
-  height: 6px;
-  border-radius: 3px;
-  background: rgb(207, 214, 228);
-`;
+import "./ProgressBarCirculatingSupply.scss";
 
 const ProgressBar = ({ percentage }) => {
-  return <Tracker style={{ width: `${percentage}%` }}></Tracker>;
+  return (
+    <div className="ProgressBar" style={{ width: `${percentage}%` }}></div>
+  );
 };
 
 export default ProgressBar;
