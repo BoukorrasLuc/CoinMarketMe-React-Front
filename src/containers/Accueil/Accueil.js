@@ -10,6 +10,9 @@ const Accueil = ({
   currentPage,
   postsPerPage,
   setCurrentPage,
+  setPostsPerPage,
+  handlePostsPerPage,
+  optionsPostsPerPage,
 }) => {
   return (
     <div className="accueil">
@@ -22,6 +25,9 @@ const Accueil = ({
         currentPage={currentPage}
         postsPerPage={postsPerPage}
         setCurrentPage={setCurrentPage}
+        setPostsPerPage={setPostsPerPage}
+        handlePostsPerPage={handlePostsPerPage}
+        optionsPostsPerPage={optionsPostsPerPage}
       />
     </div>
   );

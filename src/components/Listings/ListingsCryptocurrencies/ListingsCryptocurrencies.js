@@ -17,6 +17,9 @@ const ListingsCryptocurrencies = ({
   currentPage,
   postsPerPage,
   setCurrentPage,
+  setPostsPerPage,
+  handlePostsPerPage,
+  optionsPostsPerPage,
 }) => {
   // Sort CmcRank
   let items = [dataCryptocurrencyListingsLatest.data];
@@ -36,6 +39,7 @@ const ListingsCryptocurrencies = ({
     });
   }
 
+  // Pagination
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = dataCryptocurrencyListingsLatest.data.slice(
@@ -45,7 +49,12 @@ const ListingsCryptocurrencies = ({
 
   return (
     <div className="listings">
-      <Navbar postsPerPage={postsPerPage} />
+      <Navbar
+        postsPerPage={postsPerPage}
+        setPostsPerPage={setPostsPerPage}
+        handlePostsPerPage={handlePostsPerPage}
+        optionsPostsPerPage={optionsPostsPerPage}
+      />
       <div className="info">
         <div></div>
         <div onClick={onClickHandlerCmcRank}>
@@ -172,6 +181,8 @@ const ListingsCryptocurrencies = ({
         postsPerPage={postsPerPage}
         setCurrentPage={setCurrentPage}
         currentPage={currentPage}
+        handlePostsPerPage={handlePostsPerPage}
+        optionsPostsPerPage={optionsPostsPerPage}
       />
     </div>
   );

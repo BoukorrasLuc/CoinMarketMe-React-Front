@@ -14,21 +14,21 @@
     display: flex;
     align-items: center;
 
-    width: 211.31px;
+    width: 211px;
     height: 32px;
 
     a:nth-child(1),
     a:nth-child(2) {
-      width: 89.39px;
+      width: 89px;
       height: 32px;
 
       text-decoration: none;
       button {
-        width: 85.39px;
+        width: 85px;
         height: 32px;
 
         display: flex;
-        -webkit-box-align: center;
+        // -webkit-box-align: center;
         align-items: center;
         padding: 5px 8px;
         white-space: nowrap !important;
@@ -92,7 +92,7 @@
         color: rgb(88, 102, 126) !important;
         margin-right: 4px !important;
 
-        -webkit-box-align: center;
+        // -webkit-box-align: center;
         align-items: center;
         background: transparent;
         border: 0px;
@@ -116,31 +116,31 @@
       }
     }
     .currency {
-      width: 135.38px;
+      width: 135px;
     }
     .categories {
-      width: 98.03px;
+      width: 98px;
     }
     .defi {
-      width: 62.02px;
+      width: 62px;
     }
     .nft {
-      width: 59.33px;
+      width: 59px;
     }
     .metaverse {
-      width: 94.72px;
+      width: 94px;
     }
     .polkadot {
-      width: 86.67px;
+      width: 86px;
     }
     .bsc {
-      width: 61.34px;
+      width: 61px;
     }
     .solana {
-      width: 75.36px;
+      width: 75px;
     }
     .avalanche {
-      width: 95.75px;
+      width: 95px;
     }
 
     a.active {
@@ -153,34 +153,36 @@
   .table-control {
     display: inline-flex;
 
-    width: 371.45px;
+    width: 375px;
     height: 32px;
+
     > div:nth-child(1) {
       box-sizing: border-box;
       margin: 0px;
       display: flex;
       flex-direction: row;
-      -webkit-box-align: center;
+      // -webkit-box-align: center;
       align-items: center;
       justify-content: center;
 
-      width: 119.79px;
+      width: 127px;
       height: 32px;
       p {
-        width: 66.03px;
+        // width: 66.03px;
         height: 18px;
 
         line-height: 1.5;
-        margin: 0px 6px 0px 0px;
+        margin: 0px 3px 0px 0px;
         color: rgb(88, 102, 126);
         font-size: 12px;
+        font-weight: 600;
       }
-      div:nth-child(2) {
+      > div:nth-child(2) {
         box-sizing: border-box;
         margin: 0px;
         display: inline-flex;
         flex-direction: row;
-        -webkit-box-align: center;
+        // -webkit-box-align: center;
         align-items: center;
         background: rgb(239, 242, 245);
         border-radius: 8px;
@@ -188,27 +190,47 @@
         font-weight: 600;
         cursor: pointer;
         color: rgb(0, 0, 0);
-        padding: 5px 8px;
+
         font-size: 12px;
         line-height: 22px;
-        i {
-          margin-left: 2px;
+
+        .select {
+          .select__control {
+            background: rgb(239, 242, 245);
+            border: none;
+            padding: 0 4px;
+            min-height: 32px;
+            .select__value-container {
+              padding: 0px;
+              .select__single-value {
+                // margin-left: 3px;
+              }
+            }
+            .select__indicators {
+              .select__indicator-separator {
+                display: none;
+              }
+              .select__indicator {
+                padding: 0px;
+              }
+            }
+          }
         }
       }
     }
     > div:nth-child(2) {
-      width: 251.66px;
+      width: 251px;
       height: 32px;
 
       display: flex;
-      -webkit-box-align: center;
+      // -webkit-box-align: center;
       align-items: center;
 
       button:nth-child(1),
       button:nth-child(2),
       button:nth-child(3) {
         height: 32px;
-        -webkit-box-align: center;
+        // -webkit-box-align: center;
         align-items: center;
         background: rgb(239, 242, 245);
         border: 0px;
@@ -231,7 +253,7 @@
         margin-left: 2px;
 
         span {
-          -webkit-box-align: center;
+          // -webkit-box-align: center;
           align-items: center;
           display: flex;
           -webkit-box-pack: center;
@@ -253,11 +275,11 @@
       }
 
       button:nth-child(1) {
-        width: 72.02px;
+        width: 72px;
       }
 
       button:nth-child(2) {
-        width: 98.66px;
+        width: 98px;
 
         padding: 0px 8px;
         margin-left: 8px !important;

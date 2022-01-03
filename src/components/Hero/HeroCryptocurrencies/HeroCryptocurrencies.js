@@ -224,20 +224,6 @@ const Hero = ({ dataGlobalMetrics, dataCryptocurrencyListingsLatest }) => {
               <span>Podcast: BTC Misses Price Target</span>
             </div>
           </Carousel.Item>
-          <Carousel.Item>
-            <div className="nine">
-              <img src={img5} alt="" />
-              <span>Podcast</span>
-              <span>Podcast: BTC Misses Price Target</span>
-            </div>
-          </Carousel.Item>
-          <Carousel.Item>
-            <div className="ten">
-              <img src={img5} alt="" />
-              <span>Podcast</span>
-              <span>Podcast: BTC Misses Price Target</span>
-            </div>
-          </Carousel.Item>
         </Carousel>
       </div>
       <div className="todays-cryptocurrency-price">

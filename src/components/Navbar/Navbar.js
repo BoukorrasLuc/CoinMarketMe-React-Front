@@ -3,8 +3,9 @@ import "./Navbar.scss";
 
 // Packages
 import { NavLink } from "react-router-dom";
+import Select from "react-select";
 
-const Navbar = ({ postsPerPage }) => {
+const Navbar = ({ postsPerPage, handlePostsPerPage, optionsPostsPerPage }) => {
   return (
     <div className="navbar">
       <div className="watPort">
@@ -89,10 +90,16 @@ const Navbar = ({ postsPerPage }) => {
         <div>
           <p>Show Rows</p>
           <div>
-            {postsPerPage}
-            <span>
-              <i className="fas fa-sort-down"></i>
-            </span>
+            <Select
+              options={optionsPostsPerPage}
+              className="select"
+              classNamePrefix="select"
+              value={optionsPostsPerPage.find(
+                (obj) => obj.value === postsPerPage
+              )}
+              placeholder={postsPerPage}
+              onChange={handlePostsPerPage}
+            />
           </div>
         </div>
 

@@ -7,7 +7,7 @@
   .info {
     display: flex;
     align-items: center;
-
+    background-color: goldenrod;
     height: 46px;
     // margin: 0 5%;
     margin-top: 20px;
@@ -28,14 +28,18 @@
       width: 36px;
       height: 46.5px;
       padding: 11px 10px;
+
+      background-color: darkcyan;
     }
     div:nth-child(2) {
       display: flex;
       align-items: center;
 
-      width: 42.17px;
+      width: 52px;
       height: 46.5px;
       padding: 11px 10px;
+
+      background-color: darkgoldenrod;
 
       p {
         text-align: left;
@@ -44,8 +48,8 @@
     div:nth-child(3) {
       display: flex;
       align-items: center;
-
-      width: 226.53px;
+      background-color: darkgreen;
+      width: 227px;
       height: 46.5px;
       padding: 11px 10px;
 
@@ -57,9 +61,11 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      width: 113.52px;
+      width: 104px;
       height: 46.5px;
       padding: 11px 10px;
+
+      background-color: darkgrey;
 
       p {
         text-align: right;
@@ -69,9 +75,11 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      width: 79.69px;
+      width: 80px;
       height: 46.5px;
       padding: 11px 10px;
+
+      background-color: darkmagenta;
 
       p {
         text-align: right;
@@ -81,9 +89,11 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      width: 80.42px;
+      width: 80px;
       height: 46.5px;
       padding: 11px 10px;
+
+      background-color: darkorchid;
 
       p {
         text-align: right;
@@ -97,6 +107,8 @@
       height: 46.5px;
       padding: 11px 10px;
 
+      background-color: darkslateblue;
+
       p {
         text-align: right;
       }
@@ -108,9 +120,11 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      width: 178.8px;
+      width: 178px;
       height: 46.5px;
       padding: 11px 10px;
+
+      background-color: darkslategrey;
 
       p {
         text-align: right;
@@ -123,9 +137,11 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      width: 200.69px;
+      width: 200px;
       height: 46.5px;
       padding: 11px 10px;
+
+      background-color: deeppink;
 
       p {
         text-align: right;
@@ -135,21 +151,23 @@
       }
     }
     div:nth-child(10) {
-      width: 184px;
       height: 46.5px;
       padding: 11px 10px;
       justify-content: flex-end;
+
+      background-color: deepskyblue;
     }
     div:nth-child(11) {
-      width: 60.05px;
       height: 46.5px;
       padding: 11px 10px;
+
+      background-color: dimgray;
     }
   }
   .crypto-monnaies {
     display: flex;
     align-items: center;
-    // margin: 0 5%;
+
     height: 80px;
     font-family: "Inter", sans-serif;
 
@@ -158,16 +176,18 @@
       width: 36px;
       padding: 10px;
 
+      background-color: firebrick;
+
       i {
         color: #a6b0c3;
         height: 12px;
       }
     }
     > div:nth-child(2) {
-      // width: 47px;
       padding: 10px;
       text-align: left;
-
+      background-color: cyan;
+      width: 52px;
       p {
         line-height: 1.5;
         margin: 0px;
@@ -176,25 +196,24 @@
       }
     }
     > div:nth-child(3) {
-      width: 207px;
       padding: 10px;
       text-align: left;
-
+      background-color: rgb(84, 188, 188);
       > div:nth-child(1) {
-        width: 208.47px;
+        width: 206px;
         height: 24px;
 
         box-sizing: border-box;
         margin: 0px;
         display: flex;
-        -webkit-box-align: center;
         align-items: center;
+        justify-content: flex-start;
 
         img {
           height: 24px;
           width: 24px;
           border-radius: 12px;
-          margin-left: 5px;
+          margin-left: -2px;
         }
         div:nth-child(2) {
           height: 24px;
@@ -226,45 +245,52 @@
     }
     > div:nth-child(4) {
       padding: 10px;
-      width: 107px;
+      width: 105px;
       text-align: end;
       font-weight: 600;
       font-size: 14px;
+
+      background-color: dodgerblue;
     }
     > div:nth-child(5) {
-      width: 71.89px;
+      width: 80px;
 
       padding: 8px;
       text-align: end;
       font-size: 14px;
       font-weight: 600;
+
+      background-color: rgb(184, 30, 255);
     }
     > div:nth-child(6) {
-      width: 77.89px;
+      width: 80px;
 
       padding: 10px;
       text-align: end;
       font-size: 14px;
       font-weight: 500;
+      background-color: rgb(185, 144, 205);
     }
     > div:nth-child(7) {
-      width: 153.73px;
+      width: 168px;
 
       padding: 8px;
       text-align: end;
       font-size: 14px;
       font-weight: 500;
+      background-color: rgb(30, 233, 255);
     }
     > div:nth-child(8) {
-      width: 165.64px;
+      width: 177px;
 
       padding: 9px;
       text-align: end;
       font-size: 14px;
       font-weight: 500;
+      background-color: rgb(56, 159, 21);
     }
     > div:nth-child(9) {
-      width: 190.73px;
+      width: 201px;
 
       padding: 10px;
       text-align: end;
@@ -273,6 +299,8 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+
+      background-color: rgb(255, 173, 30);
 
       > div:nth-child(1) {
         color: rgb(0, 0, 0);

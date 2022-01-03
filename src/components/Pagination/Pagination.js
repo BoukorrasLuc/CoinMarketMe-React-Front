@@ -2,13 +2,15 @@
 import "./Pagination.scss";
 
 // Packages
-import { Link } from "react-router-dom";
+import Select from "react-select";
 
 const pagination = ({
   dataCryptocurrencyListingsLatest,
   postsPerPage,
   setCurrentPage,
   currentPage,
+  handlePostsPerPage,
+  optionsPostsPerPage,
 }) => {
   const pageNumbers = [];
   for (
@@ -43,7 +45,18 @@ const pagination = ({
 
       <div className="show-rows">
         <p>Show rows</p>
-        <div>{postsPerPage}</div>
+        <div>
+          <Select
+            options={optionsPostsPerPage}
+            className="select"
+            classNamePrefix="select"
+            value={optionsPostsPerPage.find(
+              (obj) => obj.value === postsPerPage
+            )}
+            placeholder={postsPerPage}
+            onChange={handlePostsPerPage}
+          />
+        </div>
       </div>
     </div>
   );

@@ -42,7 +42,19 @@ function App() {
 
   // Pagination
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(300);
+  const [postsPerPage, setPostsPerPage] = useState(100);
+
+  const optionsPostsPerPage = [
+    { value: "20", label: "20" },
+    { value: "50", label: "50" },
+    { value: "100", label: "100" },
+  ];
+
+  const handlePostsPerPage = (e) => {
+    setPostsPerPage(e.value);
+  };
+
+  // Date
 
   dateFormat.i18n = {
     dayNames: [
@@ -141,6 +153,9 @@ function App() {
               currentPage={currentPage}
               postsPerPage={postsPerPage}
               setCurrentPage={setCurrentPage}
+              setPostsPerPage={setPostsPerPage}
+              handlePostsPerPage={handlePostsPerPage}
+              optionsPostsPerPage={optionsPostsPerPage}
             />
           }
         />
