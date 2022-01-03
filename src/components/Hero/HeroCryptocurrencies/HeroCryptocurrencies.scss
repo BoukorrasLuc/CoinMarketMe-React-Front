@@ -1,11 +1,9 @@
 .hero {
   display: flex;
   flex-direction: column;
-  // height: 558px;
+
   width: 1280px;
   margin: 0 auto;
-
-  // padding: 0 14%;
 
   .carrousel {
     display: flex;
@@ -278,7 +276,6 @@
             cursor: pointer;
             span {
               display: flex;
-              // -webkit-box-align: center;
               align-items: center;
               font-weight: 600;
               font-size: 12px;
@@ -294,9 +291,7 @@
         > div:nth-child(2) {
           .biggestGainersContentMap {
             display: flex;
-            -webkit-box-pack: justify;
             justify-content: space-between;
-            -webkit-box-align: center;
             align-items: center;
             margin-top: 16px;
             cursor: pointer;
@@ -304,7 +299,6 @@
             padding-left: 9px;
 
             > div:nth-child(1) {
-              // -webkit-box-align: center;
               align-items: center;
               display: grid;
               grid-template-columns:
@@ -330,7 +324,6 @@
                 }
                 > div:nth-child(2) {
                   flex-direction: row;
-                  // -webkit-box-align: center;
                   align-items: center;
                   p {
                     font-size: 12px;
@@ -368,17 +361,15 @@
         > div:nth-child(2) {
           .recentlyAddedContentMap {
             display: flex;
-            -webkit-box-pack: justify;
             justify-content: space-between;
-            -webkit-box-align: center;
             align-items: center;
+
             margin-top: 16px;
             cursor: pointer;
             white-space: nowrap;
             padding-left: 9px;
 
             > div:nth-child(1) {
-              // -webkit-box-align: center;
               align-items: center;
               display: grid;
               grid-template-columns:
@@ -404,7 +395,7 @@
                 }
                 > div:nth-child(2) {
                   flex-direction: row;
-                  // -webkit-box-align: center;
+
                   align-items: center;
                   p {
                     font-size: 12px;
