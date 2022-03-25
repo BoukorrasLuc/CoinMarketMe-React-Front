@@ -7,7 +7,6 @@
   .info {
     display: flex;
     align-items: center;
-    background-color: goldenrod;
     height: 46px;
 
     margin-top: 20px;
@@ -28,8 +27,6 @@
       width: 36px;
       height: 46.5px;
       padding: 11px 10px;
-
-      background-color: darkcyan;
     }
     div:nth-child(2) {
       display: flex;
@@ -38,8 +35,6 @@
       width: 52px;
       height: 46.5px;
       padding: 11px 10px;
-
-      background-color: darkgoldenrod;
 
       p {
         text-align: left;
@@ -52,8 +47,6 @@
       width: 227px;
       height: 46.5px;
       padding: 11px 10px;
-
-      background-color: darkgreen;
 
       p {
         text-align: left;
@@ -68,8 +61,6 @@
       height: 46.5px;
       padding: 11px 10px;
 
-      background-color: darkgrey;
-
       p {
         text-align: right;
       }
@@ -82,8 +73,6 @@
       width: 80px;
       height: 46.5px;
       padding: 11px 10px;
-
-      background-color: darkmagenta;
 
       p {
         text-align: right;
@@ -98,8 +87,6 @@
       height: 46.5px;
       padding: 11px 10px;
 
-      background-color: darkorchid;
-
       p {
         text-align: right;
       }
@@ -112,8 +99,6 @@
       width: 168.14px;
       height: 46.5px;
       padding: 11px 10px;
-
-      background-color: darkslateblue;
 
       p {
         text-align: right;
@@ -131,8 +116,6 @@
       height: 46.5px;
       padding: 11px 10px;
 
-      background-color: darkslategrey;
-
       p {
         text-align: right;
       }
@@ -149,8 +132,6 @@
       height: 46.5px;
       padding: 11px 10px;
 
-      background-color: deeppink;
-
       p {
         text-align: right;
       }
@@ -162,14 +143,10 @@
       height: 46.5px;
       padding: 11px 10px;
       justify-content: flex-end;
-
-      background-color: deepskyblue;
     }
     div:nth-child(11) {
       height: 46.5px;
       padding: 11px 10px;
-
-      background-color: dimgray;
     }
   }
   .crypto-monnaies {
@@ -184,8 +161,6 @@
       width: 36px;
       padding: 10px;
 
-      background-color: firebrick;
-
       i {
         color: #a6b0c3;
         height: 12px;
@@ -194,7 +169,7 @@
     > div:nth-child(2) {
       padding: 10px;
       text-align: left;
-      background-color: cyan;
+
       width: 52px;
       p {
         line-height: 1.5;
@@ -206,7 +181,7 @@
     > div:nth-child(3) {
       padding: 10px;
       text-align: left;
-      background-color: rgb(84, 188, 188);
+
       > div:nth-child(1) {
         display: flex;
         align-items: center;
@@ -259,8 +234,6 @@
       text-align: end;
       font-weight: 600;
       font-size: 14px;
-
-      background-color: dodgerblue;
     }
     > div:nth-child(5) {
       width: 80px;
@@ -269,8 +242,6 @@
       text-align: end;
       font-size: 14px;
       font-weight: 600;
-
-      background-color: rgb(184, 30, 255);
     }
     > div:nth-child(6) {
       width: 80px;
@@ -279,7 +250,6 @@
       text-align: end;
       font-size: 14px;
       font-weight: 500;
-      background-color: rgb(185, 144, 205);
     }
     > div:nth-child(7) {
       width: 168px;
@@ -288,7 +258,6 @@
       text-align: end;
       font-size: 14px;
       font-weight: 500;
-      background-color: rgb(30, 233, 255);
     }
     > div:nth-child(8) {
       width: 177px;
@@ -297,7 +266,6 @@
       text-align: end;
       font-size: 14px;
       font-weight: 500;
-      background-color: rgb(56, 159, 21);
     }
     > div:nth-child(9) {
       display: flex;
@@ -311,8 +279,6 @@
       font-size: 14px;
       font-weight: 500;
 
-      background-color: rgb(255, 173, 30);
-
       > div:nth-child(1) {
         color: rgb(0, 0, 0);
       }
@@ -322,9 +288,6 @@
         background: rgb(239, 242, 245);
         width: 150px;
       }
-    }
-    > div:nth-child(10) {
-      background-color: aquamarine;
     }
   }
 }

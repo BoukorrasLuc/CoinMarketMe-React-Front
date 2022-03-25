@@ -1,13 +1,7 @@
-import "./App.scss";
-
 // Packages
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import dateFormat from "dateformat";
-
-// Datas
-import MesCryptos from "./Data/MyCrypto.json";
 
 // Components
 import Header from "./components/Header/Header";
@@ -25,6 +19,7 @@ import ViewPolkadot from "./containers/View-polkadot/ViewPolkadot";
 import ViewBsc from "./containers/View-bsc/ViewBsc";
 import ViewSolana from "./containers/View-solana/ViewSolana";
 import ViewAvalanche from "./containers/View-avalanche/ViewAvalanche";
+import Watchlist from "./containers/Watchlist/Watchlist";
 
 function App() {
   // Data
@@ -52,54 +47,6 @@ function App() {
 
   const handlePostsPerPage = (e) => {
     setPostsPerPage(e.value);
-  };
-
-  // Date
-
-  dateFormat.i18n = {
-    dayNames: [
-      "Dim",
-      "Lun",
-      "Mar",
-      "Mer",
-      "Jeu",
-      "Ven",
-      "Sam",
-      "Dimanche",
-      "Lundi",
-      "Mardi",
-      "Mercredi",
-      "Jeudi",
-      "Vendredi",
-      "Samedi",
-    ],
-    monthNames: [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Avr",
-      "Mai",
-      "Jui",
-      "Juil",
-      "Aou",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-      "Janvier",
-      "Février",
-      "Mars",
-      "Avril",
-      "Mai",
-      "Juin",
-      "Juillet",
-      "Août",
-      "Septembre",
-      "Octobre",
-      "Novembre",
-      "Décembre",
-    ],
-    timeNames: ["a", "p", "am", "pm", "A", "P", "AM", "PM"],
   };
 
   useEffect(() => {
@@ -137,10 +84,7 @@ function App() {
     <div>loading...</div>
   ) : (
     <Router>
-      <Header
-        dataCryptocurrencyListingsLatest={dataCryptocurrencyListingsLatest}
-        dataGlobalMetrics={dataGlobalMetrics}
-      />
+      <Header dataGlobalMetrics={dataGlobalMetrics} />
       <Routes>
         <Route
           path="/"
@@ -167,7 +111,6 @@ function App() {
                 dataCryptocurrencyListingsLatest
               }
               dataCryptocurrencyInfo={dataCryptocurrencyInfo}
-              MesCryptos={MesCryptos}
               dataCryptocurrencyTrendingLatest={
                 dataCryptocurrencyTrendingLatest
               }
@@ -180,6 +123,7 @@ function App() {
           path="/cryptocurrency-category"
           element={<CryptocurrencyCategory />}
         />
+        <Route path="/watchlist" element={<Watchlist />} />
         <Route path="/view/defi" element={<ViewDefi />} />
         <Route path="/view/collectibles-nfts" element={<ViewNft />} />
         <Route path="/view/metaverse" element={<ViewMetaverse />} />

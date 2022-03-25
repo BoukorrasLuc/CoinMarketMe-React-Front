@@ -2,7 +2,6 @@
 import "./Header.scss";
 
 // Packages
-// import dateFormat from "dateformat";
 import { Link } from "react-router-dom";
 
 // Svg
@@ -17,7 +16,7 @@ import avatar from "../../Asset/img/61359449293ccc2c4bcf07c7.png";
 // Function
 import SeparatorComma from "../../Functions/SeparatorNumbComma";
 
-const Header = ({ dataCryptocurrencyListingsLatest, dataGlobalMetrics }) => {
+const Header = ({ dataGlobalMetrics }) => {
   return (
     <div className="header">
       <div className="info">
@@ -157,41 +156,5 @@ const Header = ({ dataCryptocurrencyListingsLatest, dataGlobalMetrics }) => {
     </div>
   );
 };
-
-/* <section className="Scroll-Stock-Exchange">
-<div className="Effect">
-  {dataCryptocurrencyListingsLatest.data.map((crypto, id) => {
-    const Price = crypto.quote.USD.price;
-    const ChangeOneDay = crypto.quote.USD.percent_change_24h;
-
-    if (ChangeOneDay <= 0) {
-      <span style={{ color: "#FF4E50" }}>
-        {ChangeOneDay.toFixed(2)}%
-      </span>;
-    } else {
-      <span style={{ color: "#88C425" }}>
-        {ChangeOneDay.toFixed(2)}%
-      </span>;
-    }
-
-    return (
-      <div key={id} className="Crypto">
-
-        <span>{crypto.name}</span>&ensp;
-        <span>{Price.toFixed(2)} $</span>&ensp;
-        <span
-          style={{
-            color:
-              Math.sign(ChangeOneDay) === -1 ? "#FF4E50" : "#88C425",
-          }}
-        >
-          {ChangeOneDay.toFixed(2)}%
-        </span>
-        &ensp;
-      </div>
-    );
-  })}
-</div>
-</section> */
 
 export default Header;

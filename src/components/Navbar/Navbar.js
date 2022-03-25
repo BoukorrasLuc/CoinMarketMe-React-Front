@@ -90,7 +90,7 @@ const Navbar = ({ postsPerPage, handlePostsPerPage, optionsPostsPerPage }) => {
         <div>
           <p>Show Rows</p>
           <div>
-            <Select
+            {/* <Select
               options={optionsPostsPerPage}
               className="select"
               classNamePrefix="select"
@@ -99,7 +99,7 @@ const Navbar = ({ postsPerPage, handlePostsPerPage, optionsPostsPerPage }) => {
               )}
               placeholder={postsPerPage}
               onChange={handlePostsPerPage}
-            />
+            /> */}
           </div>
         </div>
 

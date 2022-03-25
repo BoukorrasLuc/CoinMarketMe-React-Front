@@ -1,12 +1,5 @@
-// Components
-import Navbar from "../../components/Navbar/Navbar";
-
 const Nft = () => {
-  return (
-    <div>
-      <Navbar />
-    </div>
-  );
+  return <div>nft</div>;
 };
 
 export default Nft;
